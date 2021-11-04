@@ -9,6 +9,18 @@ This project is my second milestone project for the Code Institute Diploma in Fu
     * [User Stories](#user-stories)
     * [Design](#design)
     * [Wireframes](#wireframes)
+* [Features](#features) 
+    * [tba](# tba)
+
+* [Features left to implement](features-left-to-implement)
+    * [Start Button](#start-button)
+    * [Difficulty Select Pop Up](#difficulty-select-pop-up)
+    * [How to Play Button**](#how-to-play-button**)
+    * [Difficulty Select Pop Up ](#difficulty-select-pop-up )
+    * [On Screen Controls](#on-screen-controls)
+    * [Keyboard Controls](#keyboard-controls)
+* [Technologies Used](technologies-used)
+
 
 ## **UX**
 
@@ -45,6 +57,47 @@ Before starting on the project, I created a mock up using balsamiq.
 
 #### **Desktop**
 ![Tablet Wire Frame](./assets/images/readme-images/hangman-desktop-wf.png)
+
+## **Features**
+
+### **feature**
+ * to be updated… 
+
+
+## **Features left to implement**
+
+### **Start Button**
+ * A button that allows the user to start the game. This should generate a word to be guessed and clear all wrong guesses. 
+
+### **Difficulty Select Pop Up**
+ * Once the player clicks either the start game button or play again they should be given the option to select the difficulty. This will change which words will be guessed.  
+
+### **How to Play Button**
+ * A button that allows players to see how to play the game without navigating away from the game.  
+
+### ** Difficulty Select Pop Up **
+ * a pop up menu that allows the player to see how to play the game.  
+
+### **On Screen Controls**
+ * The user should  be able to control the game via clickable buttons. When the user selects them the buttons will change colour – red if the guess is wrong and green if the guess is correct providing the player with visual feedback. 
+
+### **Keyboard Controls**
+ * As well as being able to control the game via clickable buttons the user will also be able to select letters via their keyboard.  The buttons on the screen will also change colour to reflect if the player’s guess was correct or incorrect. 
+
+### **Visual Feedback**
+ * As the player makes incorrect guesses the hangman figure will be filled in allowing players to see exactly how far they are away from getting a game over. 
+* There is a section on the game where players can see how many letters there are to guess;. As the player makes their guesses any correct guesses will fill in the blank spaces giving the player constant feedback as to how the game is going. 
+
+### **Audio Feedback **
+ * The user should  get feedback in the form of sounds based on if their guess was correct or not. 
+* The player will have the option to disable the sfxs if required. 
+
+### **Game over/ congrats pop up**
+ * When the game is either won or lost the game will display a popup either congratulating or commiserating the player. This will be accompanied by a button prompting the player to start a new game. 
+
+### **New Game button**
+ * The game will be accompanied by a button that allows the player to start a new game prior to finishing their current one.   
+
 
 
 
