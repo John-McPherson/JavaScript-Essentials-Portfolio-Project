@@ -21,6 +21,8 @@ This project is my second milestone project for the Code Institute Diploma in Fu
     * [Keyboard Controls](#keyboard-controls)
 * [Technologies Used](technologies-used)
 
+* [Deployment](#deployment)
+
 
 ## **UX**
 
@@ -98,6 +100,21 @@ Before starting on the project, I created a mock up using balsamiq.
 ### **New Game button**
  * The game will be accompanied by a button that allows the player to start a new game prior to finishing their current one.   
 
+### **Languages** 
+
+* HTML5
+* CSS3
+* JavaScript
+
+## **Deployment**
+
+The site is deployed via github pages. To deploy the site:
+
+1. Go to the Github repository for the project.
+2. Click on the settings menu at the top right-hand side of the page. 
+3. Scroll down and select the pages tab towards the bottom of the menu. 
+4. Select the source branch that you want to publish. 
+5. Click save. This will generate a url for the site.  
 
 
 
