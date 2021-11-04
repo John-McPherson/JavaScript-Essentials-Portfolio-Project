@@ -34,3 +34,17 @@ The games colour palate was generated through Coolors.co. The colours were chose
  
 
 ### **Wireframes**
+
+Before starting on the project, I created a mock up using balsamiq. 
+
+#### **Mobile**
+![Mobile Wire Frame](./assets/images/readme-images/hangman-mobile-wf.png)
+
+#### **tablet**
+![Tablet Wire Frame](./assets/images/readme-images/hangman-tablet-wf.png)
+
+#### **Desktop**
+![Tablet Wire Frame](./assets/images/readme-images/hangman-desktop-wf.png)
+
+
+
