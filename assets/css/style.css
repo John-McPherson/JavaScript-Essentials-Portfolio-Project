@@ -18,3 +18,13 @@ h1 {
     font-size: 4em;
     text-align: center;
 }
+.hangman, .controls {
+    background-color: var(--red);
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.hangman > img{
+    height:100%;
+}
