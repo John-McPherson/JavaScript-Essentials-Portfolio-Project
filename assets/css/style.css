@@ -62,6 +62,7 @@ div, header{
     justify-content: center;
     align-content: center;
     flex-grow: 4;
+    padding: 1rem;
 }
 
 /* style for all buttons  */
