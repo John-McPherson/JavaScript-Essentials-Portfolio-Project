@@ -14,6 +14,10 @@ function wrongAns(event) {
     wrong ++
     img.innerHTML =  `<img src="./assets/images/hangman${wrong}.png" alt="">`
 }
+function rightAns(event) {
+    event.preventDefault();
+    event.target.classList.add("right");
+}
 
 /**
 * The fuction run when user clicks on the start game button.
@@ -62,7 +66,7 @@ for (let x of arr){
         correct = true;
     }
 } if (correct === true){
-
+    rightAns(event)
 }else {
  wrongAns(event)
 }

@@ -95,3 +95,6 @@ button{
 .wrong{
     background-color: var(--red);
 }
+.right{
+    background-color: var(--green);
+}
