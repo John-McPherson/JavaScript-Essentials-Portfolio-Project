@@ -1,0 +1,13 @@
+:root{
+    --red:#b80000;
+    --orange: #d74e09;
+    --green:#2e9239;
+    --black:#090c02;
+    --white:#d8dad3;
+    --main-font: "permanent-marker", sans-serif;;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
