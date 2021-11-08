@@ -30,6 +30,8 @@ function clearGame(){
         control[x].classList.remove("wrong");
         control[x].classList.remove("right");
     }
+    let img = document.getElementById('hangman');
+    img.innerHTML =  `<img src="./assets/images/hangman0.png" alt="">`
 }
 
 function newWord(){
@@ -38,7 +40,7 @@ function newWord(){
     let html = ""
     for (let x of arr){
        html= html +`<span class="letter">
-            <p>${x}</p>
+            <p class="not-guessed">${x}</p>
         </span>`
     }
     let container = document.getElementById('word')

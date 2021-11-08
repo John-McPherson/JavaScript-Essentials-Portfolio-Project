@@ -4,6 +4,7 @@
     --green:#2e9239;
     --black:#090c02;
     --white:#d8dad3;
+    --transparant:rgba(0,0,0,0.0); 
     --main-font: "permanent-marker", sans-serif;;
 }
 * {
@@ -46,13 +47,17 @@ div, header{
 .word{
     height:10vh;
 }
+.not-guessed{
+    color:var(--transparant);
+}
 .letter > p{
     font-size: 2em;
-    border-bottom: 4px solid;
+    border-bottom: 4px solid var(--black);
     border-radius: 40px 35px 225px 45px/25px 225px 35px 35px;
     padding: 0 10px;
     margin : 0 5px
 }
+
 
 /* style for the controls/ keyboard section */
 
