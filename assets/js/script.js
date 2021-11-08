@@ -2,6 +2,7 @@ let control = document.getElementsByClassName('control');
 for (let x = 0; x < control.length; x++) {
     control[x].addEventListener("click", wrongAns);
 }
+var wrong = 0
 /**
 *Called when the user enters an incorrect guess. 
 *Turns the pressed key red and advances the hangman image by one
@@ -9,6 +10,9 @@ for (let x = 0; x < control.length; x++) {
 function wrongAns(event) {
     event.preventDefault();
     event.target.classList.add("wrong");
+    let img = document.getElementById('hangman');
+    wrong ++
+    img.innerHTML =  `<img src="./assets/images/hangman${wrong}.png" alt="">`
 }
 
 /**
