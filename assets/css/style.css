@@ -11,3 +11,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: var(--main-font);
+}
+h1 {
+    font-size: 4em;
+    text-align: center;
+}
