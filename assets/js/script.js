@@ -1,8 +1,8 @@
 let control = document.getElementsByClassName('control');
 for (let x = 0; x < control.length; x++) {
-    control[x].addEventListener("click", wrongAns);
+    control[x].addEventListener("click", checkGuess);
 }
-var wrong = 0
+var wrong = 0;
 /**
 *Called when the user enters an incorrect guess. 
 *Turns the pressed key red and advances the hangman image by one
@@ -49,6 +49,22 @@ function newWord(){
     }
     let container = document.getElementById('word')
     container.innerHTML = html;
+}
 
+function checkGuess(event){
+event.preventDefault();
+let guess = this.getAttribute("data-key");
+ let word = ['test','check'];
+ let correct = false;
+    let arr = word[0].split("")
+for (let x of arr){
+    if (x === guess){
+        correct = true;
+    }
+} if (correct === true){
+
+}else {
+ wrongAns(event)
+}
 
 }
