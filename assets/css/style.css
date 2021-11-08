@@ -20,6 +20,7 @@ h1 {
 }
 header {
     height:15vh;
+    background-color: var(--orange);
 }
 div, header{ 
     display: flex;
@@ -30,9 +31,14 @@ div, header{
     height:100%;
 }
 .hangman, .controls {
-    height: 35vh;
+    height: 30vh;
+    background-color: var(--green);
 }
 .selector{
     height: 15vh;
     background-color: var(--red);
+}
+.word{
+    height:10vh;
+    background-color: var(--orange);
 }
