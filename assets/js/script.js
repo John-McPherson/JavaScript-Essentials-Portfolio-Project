@@ -47,7 +47,7 @@ function newWord(){
     let arr = word[0].split("")
     let html = ""
     for (let x of arr){
-       html= html +`<span class="letter">
+       html= html +`<span class="letter" data-letter="${x}">
             <p class="not-guessed">${x}</p>
         </span>`
     }
@@ -59,6 +59,7 @@ function checkGuess(event){
 event.preventDefault();
 let guess = this.getAttribute("data-key");
  let word = ['test','check'];
+ let letter = "";
  let correct = false;
     let arr = word[0].split("")
 for (let x of arr){
@@ -67,6 +68,14 @@ for (let x of arr){
     }
 } if (correct === true){
     rightAns(event)
+    let span = document.getElementsByClassName('letter');
+    for (let y of span){
+            letter = y.getAttribute("data-letter");
+        if (letter === guess){
+        y.firstElementChild.classList.remove("not-guessed");
+    
+        }
+    }
 }else {
  wrongAns(event)
 }
