@@ -54,7 +54,7 @@ Before starting on the project, I created a mock up using balsamiq.
 #### **Mobile**
 ![Mobile Wire Frame](./assets/images/readme-images/hangman-mobile-wf.png)
 
-#### **tablet**
+#### **Tablet**
 ![Tablet Wire Frame](./assets/images/readme-images/hangman-tablet-wf.png)
 
 #### **Desktop**
