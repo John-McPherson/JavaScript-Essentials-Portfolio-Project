@@ -18,13 +18,21 @@ h1 {
     font-size: 4em;
     text-align: center;
 }
-.hangman, .controls {
-    background-color: var(--red);
-    height: 40vh;
+header {
+    height:15vh;
+}
+div, header{ 
     display: flex;
     justify-content: center;
     align-content: center;
 }
 .hangman > img{
     height:100%;
+}
+.hangman, .controls {
+    height: 35vh;
+}
+.selector{
+    height: 15vh;
+    background-color: var(--red);
 }
