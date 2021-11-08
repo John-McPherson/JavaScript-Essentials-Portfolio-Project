@@ -20,7 +20,7 @@ function startGame(event) {
     let newGameBtn = document.getElementById("new-game");
     newGameBtn.innerHTML = "New Game"
     clearGame();
-
+    newWord();
 }
 /**
 * Clears the wrong and right answers
@@ -30,4 +30,19 @@ function clearGame(){
         control[x].classList.remove("wrong");
         control[x].classList.remove("right");
     }
+}
+
+function newWord(){
+    let word = ['test','check']
+    let arr = word[0].split("")
+    let html = ""
+    for (let x of arr){
+       html= html +`<span class="letter">
+            <p>${x}</p>
+        </span>`
+    }
+    let container = document.getElementById('word')
+    container.innerHTML = html;
+
+
 }
