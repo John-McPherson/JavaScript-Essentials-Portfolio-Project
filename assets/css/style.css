@@ -15,12 +15,13 @@ body{
     font-family: var(--main-font);
 }
 h1 {
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
 }
 header {
-    height:15vh;
+    height:10vh;
     background-color: var(--orange);
+    height: 12.5vh;
 }
 div, header{ 
     display: flex;
@@ -30,15 +31,32 @@ div, header{
 .hangman > img{
     height:100%;
 }
-.hangman, .controls {
+.hangman {
     height: 30vh;
     background-color: var(--green);
 }
 .selector{
-    height: 15vh;
+    height: 12.5vh;
     background-color: var(--red);
 }
 .word{
     height:10vh;
     background-color: var(--orange);
+}
+.controls{
+    flex-flow: row wrap;
+    height: 35vh;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 4;
+}
+.controls >button{
+    background: transparent;
+    font-family:var(--button-font);
+    padding:.25rem .5rem;
+    margin:.35rem;
+    font-size: 1.25rem;
+    outline:none;
+    border:4px solid;
+    border-radius: 225px 35px 225px 45px/25px 225px 35px 225px
 }
