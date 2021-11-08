@@ -19,7 +19,7 @@
     <div class="hangman">
         <img src="./assets/images/hangman.png" alt="">
     </div>
-    <div class="word">
+    <div class="word" id="word">
         <span class="letter">
             <p>s</p>
         </span>
@@ -67,7 +67,7 @@
         <button class="control">z</button>
     </div>
     <div class="selector">
-        <button class="Start">
+        <button class="Start" id="new-game" onclick="startGame(event)">
             Start
         </button>
         <button class="Start">

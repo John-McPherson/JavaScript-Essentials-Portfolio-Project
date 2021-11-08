@@ -84,3 +84,9 @@ button{
     padding:.5rem .5rem;
     height: 12.5vh;
 }
+
+/* style for pressed buttons */
+
+.wrong{
+    background-color: var(--red);
+}
