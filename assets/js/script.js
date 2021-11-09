@@ -44,7 +44,7 @@ function clearGame(){
 
 function newWord(){
     let word = ['test','check']
-    let arr = word[0].split("")
+    let arr = word[1].split("")
     let html = ""
     for (let x of arr){
        html= html +`<span class="letter" data-letter="${x}">
@@ -61,7 +61,7 @@ let guess = this.getAttribute("data-key");
  let word = ['test','check'];
  let letter = "";
  let correct = false;
-    let arr = word[0].split("")
+    let arr = word[1].split("")
 for (let x of arr){
     if (x === guess){
         correct = true;
@@ -72,8 +72,7 @@ for (let x of arr){
     for (let y of span){
             letter = y.getAttribute("data-letter");
         if (letter === guess){
-        y.firstElementChild.classList.remove("not-guessed");
-    
+        y.firstElementChild.classList.remove("not-guessed");  
         }
     }
 }else {
