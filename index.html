@@ -67,7 +67,7 @@
         <button class="control" data-key="z">z</button>
     </div>
     <div class="selector">
-        <button class="open-modal" id="new-game">
+        <button class="open-modal" id="new-game" data-start="new-game">
             Start
         </button>
         <button class="open-modal" id="open-how-to">
@@ -90,6 +90,14 @@
           
             
             <button class="close-modal">Close</button>
+        </div>
+    </div>
+    <div class="modal modal-close" id="game-over"> 
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <span id="game-over-text"></span>
+            <button class="open-modal" data-start="new-game">
+                New Game</button>
         </div>
     </div>
 

@@ -111,7 +111,11 @@ function checkEnd() {
     if (right === word.length) {
         alert("you won!")
     } else if (wrong === 11) {
-        alert("game over! the word was " + word)
+        let gameOver = document.getElementById('game-over');
+        let gameOverText = document.getElementById('game-over-text');
+        let html = `<p>The word was ${word}</p>`
+        gameOverText.innerHTML = html;
+        gameOver.classList.remove('modal-close');
     }
 }
 
@@ -131,8 +135,9 @@ function genWord() {
  */
 function openModal(event) {
     event.preventDefault();
-    let type = this.getAttribute("id");
+    let type = this.getAttribute("data-start");
     if (type === "new-game") {
+        closeModal();
         let open = document.getElementById('diff-select');
         open.classList.remove('modal-close');
     } else {
@@ -146,8 +151,5 @@ function closeModal() {
     for (let x of close) {
         x.classList.add('modal-close');
     }
-    // let close = document.getElementById('diff-select');
-    // close.classList.add('modal-close');
-    // close = document.getElementById('how-to')
-    // close.classList.add('modal-close');
+
 }
