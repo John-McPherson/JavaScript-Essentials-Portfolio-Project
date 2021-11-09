@@ -7,8 +7,8 @@ var right = 0;
 var word = "start";
 var difficulty = 'easy';
 var easy = ['have','say', 'get','make','know','take','see','come','look','want','give','use','tell','ask','work', 'seem', 'feel','call']
-var medium =['think', 'leave',]
-var hard =['jazz']
+var medium =['think', 'leave','lonely', 'climb','interesting','skilful','modern', 'safety', 'people','weird','women','Saturday','health','forty','diary','lovely','design','issue']
+var hard =['jazz','conscience','audible','incidentally','diamond', 'industrial', 'buried', 'knowledge','argument','material','column','stomach','acquire','essential','courteous','mortgage','minutes','friends'] 
 /**
 *Called when the user enters an incorrect guess. 
 *Turns the pressed key red and advances the hangman image by one
@@ -52,7 +52,7 @@ function clearGame(){
 }
 
 function newWord(){
-    word = easy[Math.floor(Math.random() * easy.length)];
+    word = hard[Math.floor(Math.random() * hard.length)];
     let arr = word.split("")
     let html = ""
     for (let x of arr){
