@@ -2,6 +2,10 @@ let control = document.getElementsByClassName('control');
 for (let x = 0; x < control.length; x++) {
     control[x].addEventListener("click", checkGuess);
 }
+let open = document.getElementsByClassName('open-modal');
+for (let x = 0; x < open.length; x++) {
+    open[x].addEventListener("click", openModal);
+}
 var wrong = 0;
 var right = 0;
 var word = "start";
@@ -106,4 +110,16 @@ function genWord(){
         word = easy[Math.floor(Math.random() * easy.length)];
     }
 
+}
+
+/**
+* To open and close modals
+*/
+function openModal(event){
+    event.preventDefault;
+    let type = this.getAttribute("id");
+    if (type ==="new-game"){
+        let open = document.getElementById('diff-select');
+        open.classList.remove('modal-close');
+    }
 }

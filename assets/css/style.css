@@ -109,7 +109,7 @@ button {
     background-color: var(--green);
 }
 
-/* style for modal boxes addapted from w3schools.com How To - CSS/JS Modal https://www.w3schools.com/howto/howto_css_modals.asp*/
+/* style for modal boxes */
 
 .modal {
     position: fixed;
@@ -121,9 +121,9 @@ button {
     background-color: var(--white);
     border: 6px solid;
     border-radius: 225px 35px 225px 45px/25px 225px 35px 225px
+    
 }
-
-.modal-content {
+.modal-content{
     display: flex;
     flex-flow: column nowrap;
     width: 90%;
@@ -131,25 +131,25 @@ button {
     justify-content: space-around;
 }
 
-/* style for diff modal buttons and heading */
+.modal-close{
+display: none;
+}
+
+/* style for difficulty setting buttons and heading   */
 
 #easy {
     background-color: var(--green);
 }
-
-#medium {
+#medium{
     background-color: var(--orange);
 }
-
-#hard {
+#hard{
     background-color: var(--red);
 }
-
-.close {
+.close{
     background-color: var(--black);
     color: var(--white);
 }
-
 h2 {
     font-size: 2rem;
     text-align: center;
