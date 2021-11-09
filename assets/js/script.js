@@ -109,7 +109,11 @@ function checkGuess(event) {
 
 function checkEnd() {
     if (right === word.length) {
-        alert("you won!")
+        let congrats = document.getElementById('congrats');
+        let congratsText = document.getElementById('congrats-text');
+        let html = `<p>The word was ${word}</p>`
+        congratsText.innerHTML = html;
+        congrats.classList.remove('modal-close');
     } else if (wrong === 11) {
         let gameOver = document.getElementById('game-over');
         let gameOverText = document.getElementById('game-over-text');
