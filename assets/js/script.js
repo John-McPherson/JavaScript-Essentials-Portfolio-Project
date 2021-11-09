@@ -10,6 +10,10 @@ let close = document.getElementsByClassName('close-modal');
 for (let x = 0; x < close.length; x++) {
     close[x].addEventListener("click", closeModal);
 }
+let diffSelect = document.getElementsByClassName('diff-select');
+for (let x = 0; x < diffSelect.length; x++) {
+    diffSelect[x].addEventListener("click", startGame);
+}
 var wrong = 0;
 var right = 0;
 var word = "start";
@@ -44,6 +48,7 @@ function startGame(event) {
     newGameBtn.innerHTML = "New Game"
     clearGame();
     newWord();
+    closeModal(event)
 }
 /**
 * Clears the wrong and right answers
@@ -132,6 +137,4 @@ function closeModal(event){
     event.preventDefault;
     let close = document.getElementById('diff-select');
         close.classList.add('modal-close');
-
-    console.log(type);
 }

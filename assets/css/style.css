@@ -146,7 +146,7 @@ display: none;
 #hard{
     background-color: var(--red);
 }
-.close{
+.close-modal{
     background-color: var(--black);
     color: var(--white);
 }
