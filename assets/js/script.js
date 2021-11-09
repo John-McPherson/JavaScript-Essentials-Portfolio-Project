@@ -3,6 +3,12 @@ for (let x = 0; x < control.length; x++) {
     control[x].addEventListener("click", checkGuess);
 }
 var wrong = 0;
+var right = 0;
+var word = "start";
+var difficulty = 'easy';
+var easy = ['have','say', 'get','make','know','take','see','come','look','want','give','use','tell','ask','work', 'seem', 'feel','call']
+var medium =['think', 'leave',]
+var hard =['jazz']
 /**
 *Called when the user enters an incorrect guess. 
 *Turns the pressed key red and advances the hangman image by one
@@ -11,12 +17,13 @@ function wrongAns(event) {
     event.preventDefault();
     event.target.classList.add("wrong");
     let img = document.getElementById('hangman');
-    wrong ++
+    wrong ++;
     img.innerHTML =  `<img src="./assets/images/hangman${wrong}.png" alt="">`
 }
 function rightAns(event) {
     event.preventDefault();
     event.target.classList.add("right");
+  
 }
 
 /**
@@ -40,11 +47,13 @@ function clearGame(){
     }
     let img = document.getElementById('hangman');
     img.innerHTML =  `<img src="./assets/images/hangman0.png" alt="">`
+    right =0;
+    wrong =0;
 }
 
 function newWord(){
-    let word = ['test','check']
-    let arr = word[1].split("")
+    word = easy[Math.floor(Math.random() * easy.length)];
+    let arr = word.split("")
     let html = ""
     for (let x of arr){
        html= html +`<span class="letter" data-letter="${x}">
@@ -58,10 +67,9 @@ function newWord(){
 function checkGuess(event){
 event.preventDefault();
 let guess = this.getAttribute("data-key");
- let word = ['test','check'];
  let letter = "";
  let correct = false;
-    let arr = word[1].split("")
+    let arr = word.split("")
 for (let x of arr){
     if (x === guess){
         correct = true;
@@ -73,10 +81,18 @@ for (let x of arr){
             letter = y.getAttribute("data-letter");
         if (letter === guess){
         y.firstElementChild.classList.remove("not-guessed");  
-        }
+        right ++;
     }
+}
 }else {
  wrongAns(event)
-}
+} checkEnd()}
 
+
+function checkEnd(){
+    if (right === word.length){
+        alert("you won!")
+    }else if (wrong === 11){
+        alert("game over!")
+    }
 }
