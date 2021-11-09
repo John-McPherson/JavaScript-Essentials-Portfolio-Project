@@ -44,11 +44,12 @@ function rightAns(event) {
 */
 function startGame(event) {
     event.preventDefault();
+    difficulty = this.getAttribute("data-diff");
     let newGameBtn = document.getElementById("new-game");
     newGameBtn.innerHTML = "New Game"
     clearGame();
     newWord();
-    closeModal(event)
+    closeModal();
 }
 /**
 * Clears the wrong and right answers
@@ -66,8 +67,8 @@ function clearGame(){
 
 function newWord(){
    genWord();
-    let arr = word.split("")
-    let html = ""
+    let arr = word.split("");
+    let html = "";
     for (let x of arr){
        html= html +`<span class="letter" data-letter="${x}">
             <p class="not-guessed">${x}</p>
@@ -125,7 +126,7 @@ function genWord(){
 * To open and close modals
 */
 function openModal(event){
-    event.preventDefault;
+    event.preventDefault();
     let type = this.getAttribute("id");
     if (type ==="new-game"){
         let open = document.getElementById('diff-select');
@@ -133,8 +134,7 @@ function openModal(event){
     }
 }
 
-function closeModal(event){
-    event.preventDefault;
+function closeModal(){
     let close = document.getElementById('diff-select');
         close.classList.add('modal-close');
 }
