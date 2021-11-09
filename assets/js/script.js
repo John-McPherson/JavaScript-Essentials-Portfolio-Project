@@ -52,7 +52,7 @@ function clearGame(){
 }
 
 function newWord(){
-    word = hard[Math.floor(Math.random() * hard.length)];
+   genWord();
     let arr = word.split("")
     let html = ""
     for (let x of arr){
@@ -93,6 +93,17 @@ function checkEnd(){
     if (right === word.length){
         alert("you won!")
     }else if (wrong === 11){
-        alert("game over!")
+        alert("game over! the word was " + word)
     }
+}
+
+function genWord(){
+    if (difficulty === 'hard'){
+        word = hard[Math.floor(Math.random() * hard.length)];
+    }else if(difficulty === 'medium'){
+        word = medium[Math.floor(Math.random() * medium.length)];
+    }else {
+        word = easy[Math.floor(Math.random() * easy.length)];
+    }
+
 }
