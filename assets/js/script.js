@@ -142,8 +142,12 @@ function openModal(event) {
 }
 
 function closeModal() {
-    let close = document.getElementById('diff-select');
-    close.classList.add('modal-close');
-    close = document.getElementById('how-to')
-    close.classList.add('modal-close');
+    let close =document.getElementsByClassName('modal');
+    for (let x of close) {
+        x.classList.add('modal-close');
+    }
+    // let close = document.getElementById('diff-select');
+    // close.classList.add('modal-close');
+    // close = document.getElementById('how-to')
+    // close.classList.add('modal-close');
 }
