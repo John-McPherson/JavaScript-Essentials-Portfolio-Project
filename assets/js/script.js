@@ -6,6 +6,10 @@ let open = document.getElementsByClassName('open-modal');
 for (let x = 0; x < open.length; x++) {
     open[x].addEventListener("click", openModal);
 }
+let close = document.getElementsByClassName('close-modal');
+for (let x = 0; x < close.length; x++) {
+    close[x].addEventListener("click", closeModal);
+}
 var wrong = 0;
 var right = 0;
 var word = "start";
@@ -122,4 +126,12 @@ function openModal(event){
         let open = document.getElementById('diff-select');
         open.classList.remove('modal-close');
     }
+}
+
+function closeModal(event){
+    event.preventDefault;
+    let close = document.getElementById('diff-select');
+        close.classList.add('modal-close');
+
+    console.log(type);
 }
