@@ -29,15 +29,17 @@ var hard = ['jazz', 'conscience', 'audible', 'incidentally', 'diamond', 'industr
  */
 function wrongAns(event) {
     event.preventDefault();
-    event.target.classList.add("wrong");
-    let img = document.getElementById('hangman');
-    wrong++;
-    img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
+        event.target.classList.add("wrong");
+        event.target.classList.add("guessed");
+        let img = document.getElementById('hangman');
+        wrong++;
+        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
 }
 
 function rightAns(event) {
     event.preventDefault();
     event.target.classList.add("right");
+    event.target.classList.add("guessed");
 
 }
 
@@ -83,6 +85,9 @@ function newWord() {
 
 function checkGuess(event) {
     event.preventDefault();
+    if (event.target.classList.contains("guessed")){    
+    }
+    else {
     let guess = this.getAttribute("data-key");
     let letter = "";
     let correct = false;
@@ -113,7 +118,7 @@ function checkGuess(event) {
         wrongAns(event)
     }
     checkEnd()
-}
+}}
 
 
 function checkEnd() {
