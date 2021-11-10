@@ -56,6 +56,7 @@ header {
 }
 
 .hangman {
+    padding: .5em;
     height: 30vh;
 }
 
