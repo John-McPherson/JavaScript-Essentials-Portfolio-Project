@@ -35,15 +35,13 @@ header {
     flex-flow: row nowrap;
 }
 
-header>p {
+header p {
     padding-right: .25em;
     padding-left: .25em;
 
 }
 
-header>p,
-label,
-h1 {
+header p, label, h1 {
     align-self: center;
 }
 
@@ -265,7 +263,36 @@ input:checked+.slider:before {
 /* for larger phonescreens size 375px and up  */
 @media screen and (min-width:374px){
     .word {
-        align-items: end;
+        align-items: center;
     }
 }
+
+/* for larger tablet screens size 530px and up  */
+@media screen and (min-width:530px){
+    h1{
+        font-size: 3.5em;
+    }
+    header{
+        justify-content: space-around;
+        padding-left: 30%;
+    }
+    header > div{
+        justify-self: flex-end;
+        
+    }
+
+    .hangman{
+        height: 35vh;
+        padding: 2.5%;
+    }
+    .controls{
+        height: 30vh;
+        margin-top:.5em;
+    }
+    .control {
+        padding:.35em .75em;
+    }
+
+}
+
 
