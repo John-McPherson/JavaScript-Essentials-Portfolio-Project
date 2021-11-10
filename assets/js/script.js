@@ -21,8 +21,8 @@ var word = "start";
 var mute = false;
 var difficulty = 'easy';
 var easy = ['have', 'say', 'get', 'make', 'know', 'take', 'see', 'come', 'look', 'want', 'give', 'use', 'tell', 'ask', 'work', 'seem', 'feel', 'call']
-var medium = ['think', 'leave', 'lonely', 'climb', 'interesting', 'skilful', 'modern', 'safety', 'people', 'weird', 'women', 'Saturday', 'health', 'forty', 'diary', 'lovely', 'design', 'issue']
-var hard = ['jazz', 'conscience', 'audible', 'incidentally', 'diamond', 'industrial', 'buried', 'knowledge', 'argument', 'material', 'column', 'stomach', 'acquire', 'essential', 'courteous', 'mortgage', 'minutes', 'friends']
+var medium = ['think', 'leave', 'lonely', 'climb', 'skilful', 'modern', 'safety', 'people', 'weird', 'women', 'Saturday', 'health', 'forty', 'diary', 'lovely', 'design', 'issue']
+var hard = ['jazz', 'conscience', 'audible', 'diamond', 'industrial', 'buried', 'knowledge', 'argument', 'material', 'column', 'stomach', 'acquire', 'essential', 'courteous', 'mortgage', 'minutes', 'friends']
 /**
  *Called when the user enters an incorrect guess. 
  *Turns the pressed key red and advances the hangman image by one

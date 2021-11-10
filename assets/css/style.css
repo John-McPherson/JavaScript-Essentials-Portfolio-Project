@@ -34,14 +34,19 @@ header {
     justify-content: space-around;
     flex-flow: row nowrap;
 }
-header > p{
+
+header>p {
     padding-right: .25em;
     padding-left: .25em;
-    
+
 }
-header > p,label, h1{
+
+header>p,
+label,
+h1 {
     align-self: center;
 }
+
 div,
 header {
     display: flex;
@@ -76,15 +81,16 @@ header {
     border-radius: 40px 35px 225px 45px/25px 225px 35px 35px;
     padding: 0 10px;
     margin: 0 5px;
-    
+
 }
 
-.long p{
+.long p {
     font-size: 2em;
     padding: 0 5px;
     margin: 0 5px
 }
-.really-long p{
+
+.really-long p {
     font-size: 1.75em;
     padding: 0 5px;
     margin: 0 5px
@@ -253,3 +259,13 @@ input:checked+.slider:before {
     -ms-transform: translateX(7px);
     transform: translateX(7px);
 }
+
+/* media queries for responsive design */
+
+/* for larger phonescreens size 375px and up  */
+@media screen and (min-width:374px){
+    .word {
+        align-items: end;
+    }
+}
+
