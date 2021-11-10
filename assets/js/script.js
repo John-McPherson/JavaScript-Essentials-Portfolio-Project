@@ -63,6 +63,7 @@ function clearGame() {
     for (let x = 0; x < control.length; x++) {
         control[x].classList.remove("wrong");
         control[x].classList.remove("right");
+        control[x].classList.remove("guessed");
     }
     let img = document.getElementById('hangman');
     img.innerHTML = `<img src="./assets/images/hangman0.png" alt="">`
