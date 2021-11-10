@@ -154,3 +154,17 @@ h2 {
     font-size: 2rem;
     text-align: center;
 }
+.modal-content > .new-game{
+    background-color: var(--green);
+}
+
+/* style for text content  */
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.modal-content > ol{
+    padding-left: 5%;
+}
