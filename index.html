@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
     <meta name="description" content="A online version of the children's school game - hangman.">
-    <meta name="keywords" content="hangman, game, guessing game, word game, educational, schoolgame" >
+    <meta name="keywords" content="hangman, game, guessing game, word game, educational, schoolgame">
     <meta name="author" content="John McPherson">
 
     <link rel="stylesheet" href="https://use.typekit.net/liq5jcy.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <header>
         <h1>Hangman</h1>
+        <p>sfx</p>
+        <label class="switch">
+            <input type="checkbox" checked onchange="muteSfx()">
+            <span class="slider"></span>
+          </label>
+        
     </header>
     <div class="hangman" id="hangman">
         <img src="./assets/images/hangman11.png" alt="">
@@ -35,7 +43,7 @@
         <span class="letter">
             <p>t</p>
         </span>
-        
+
 
     </div>
     <div class="controls">
@@ -75,7 +83,7 @@
         </button>
     </div>
 
-    <div class="modal modal-close" id="diff-select"> 
+    <div class="modal modal-close" id="diff-select">
         <div class="modal-content">
             <h2>Choose your difficulty</h2>
             <button class="diff-select" id="easy" data-diff="easy">Easy</button>
@@ -84,21 +92,22 @@
             <button class="close-modal">Close</button>
         </div>
     </div>
-    <div class="modal modal-close" id="how-to"> 
+    <div class="modal modal-close" id="how-to">
         <div class="modal-content">
             <h2>How to Play;</h2>
             <ol>
                 <li>Select the letter you want to guess from the controls or by pressing it on your keyboard. </li>
-                <li>If you are correct all instances of the letter will be filled in on the word. If you are incorrect part of the “hangman” appear on screen.</li>
+                <li>If you are correct all instances of the letter will be filled in on the word. If you are incorrect
+                    part of the “hangman” appear on screen.</li>
                 <li>If you manage to fill in all the letters you win. </li>
                 <li>If the “hangman” is completed before you get the word right it is game over. </li>
             </ol>
-          
-            
+
+
             <button class="close-modal">Close</button>
         </div>
     </div>
-    <div class="modal modal-close" id="game-over"> 
+    <div class="modal modal-close" id="game-over">
         <div class="modal-content">
             <h2>Game Over</h2>
             <p>You lost!</p>
@@ -107,7 +116,7 @@
                 New Game</button>
         </div>
     </div>
-    <div class="modal modal-close" id="congrats"> 
+    <div class="modal modal-close" id="congrats">
         <div class="modal-content">
             <h2>Congratulations!</h2>
             <p>You won!</p>
@@ -116,10 +125,12 @@
                 New Game</button>
         </div>
     </div>
+    
 
     <audio src="./assets/sfx/correct-sfx.wav" id="correct-sfx"></audio>
     <audio src="./assets/sfx/wrong-sfx.wav" id="wrong-sfx"></audio>
 
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

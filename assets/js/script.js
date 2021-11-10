@@ -18,6 +18,7 @@ window.addEventListener('keydown',keyControls);
 var wrong = 0;
 var right = 0;
 var word = "start";
+var mute = false;
 var difficulty = 'easy';
 var easy = ['have', 'say', 'get', 'make', 'know', 'take', 'see', 'come', 'look', 'want', 'give', 'use', 'tell', 'ask', 'work', 'seem', 'feel', 'call']
 var medium = ['think', 'leave', 'lonely', 'climb', 'interesting', 'skilful', 'modern', 'safety', 'people', 'weird', 'women', 'Saturday', 'health', 'forty', 'diary', 'lovely', 'design', 'issue']
@@ -98,14 +99,17 @@ function checkGuess(event) {
             letter = y.getAttribute("data-letter");
             if (letter === guess) {
                 y.firstElementChild.classList.remove("not-guessed");
+                if (mute === false){
                 let audio = document.getElementById('correct-sfx');
-                audio.play();
+                audio.play();}
                 right++;
             }
         }
     } else {
         let audio = document.getElementById('wrong-sfx');
-        audio.play();
+        if (mute === false){
+            audio.play();
+        }
         wrongAns(event)
     }
     checkEnd()
@@ -170,4 +174,7 @@ function keyControls(event){
     let key = event.key;
     let pressed = document.querySelectorAll(`[data-key='${key}']`);
     pressed[0].click();
+}
+function muteSfx(){
+    mute === false ? mute = true: mute = false;
 }
