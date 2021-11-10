@@ -129,7 +129,7 @@ function checkEnd() {
         let html = `<p>The word was ${word}</p>`
         congratsText.innerHTML = html;
         congrats.classList.remove('modal-close');
-    } else if (wrong === 11) {
+    } else if (wrong === 10) {
         let gameOver = document.getElementById('game-over');
         let gameOverText = document.getElementById('game-over-text');
         let html = `<p>The word was ${word}</p>`
