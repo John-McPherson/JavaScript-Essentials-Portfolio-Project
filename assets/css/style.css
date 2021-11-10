@@ -296,3 +296,39 @@ input:checked+.slider:before {
 }
 
 
+/* for larger tablet screens size 700px and up  */
+
+@media screen and (min-width:700px){
+.controls{
+    padding: 0 5%;
+}
+}
+
+
+/* for larger tablet screens size 870px and up  */
+@media screen and (min-width:870px){
+    .hangman{
+        height: 45vh; 
+    }
+    .controls{
+        height: 20vh;
+    }
+}
+    /* for larger tablet screens size 939px and up  */
+@media screen and (min-width:939px){
+    .controls{
+        padding: 0 8%;
+    }
+}
+ /* for larger tablet screens size 1020px and up  */
+@media screen and (min-width:1020px){
+    .controls{
+        padding: 0 10%;
+    }
+}
+ /* for larger tablet screens size 1100px and up  */
+@media screen and (min-width:1100px){
+    .controls{
+        padding: 0 15%;
+    }
+}
