@@ -69,6 +69,9 @@ function clearGame() {
     img.innerHTML = `<img src="./assets/images/hangman0.png" alt="">`
     right = 0;
     wrong = 0;
+    let wordContainer = document.getElementById('word');
+    wordContainer.classList.remove('long');
+    wordContainer.classList.remove('really-long');
 }
 
 function newWord() {
@@ -145,6 +148,13 @@ function genWord() {
         word = medium[Math.floor(Math.random() * medium.length)];
     } else {
         word = easy[Math.floor(Math.random() * easy.length)];
+    }
+    if (word.length > 7){
+        let wordContainer = document.getElementById('word');
+        wordContainer.classList.add('long');
+    }else if (word.length > 9){
+        let wordContainer = document.getElementById('word');
+        wordContainer.classList.add('really-long');
     }
 
 }
