@@ -98,10 +98,14 @@ function checkGuess(event) {
             letter = y.getAttribute("data-letter");
             if (letter === guess) {
                 y.firstElementChild.classList.remove("not-guessed");
+                let audio = document.getElementById('correct-sfx');
+                audio.play();
                 right++;
             }
         }
     } else {
+        let audio = document.getElementById('wrong-sfx');
+        audio.play();
         wrongAns(event)
     }
     checkEnd()
