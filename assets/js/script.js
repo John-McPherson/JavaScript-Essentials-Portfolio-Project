@@ -14,6 +14,7 @@ let diffSelect = document.getElementsByClassName('diff-select');
 for (let x = 0; x < diffSelect.length; x++) {
     diffSelect[x].addEventListener("click", startGame);
 }
+window.addEventListener('keydown',keyControls);
 var wrong = 0;
 var right = 0;
 var word = "start";
@@ -156,4 +157,13 @@ function closeModal() {
         x.classList.add('modal-close');
     }
 
+}
+/**
+ * allows the player to control the game through the keyboard 
+ * 
+ */
+function keyControls(event){
+    let key = event.key;
+    let pressed = document.querySelectorAll(`[data-key='${key}']`);
+    pressed[0].click();
 }
