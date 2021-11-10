@@ -17,73 +17,82 @@
 <body>
     <header>
         <h1>Hangman</h1>
-        <div class="sfx">      
+        <div class="sfx">
             <p>sfx</p>
             <label class="switch">
                 <input type="checkbox" checked onchange="muteSfx()">
                 <span class="slider"></span>
-              </label>
+            </label>
         </div>
-        
+
     </header>
-    <div class="hangman" id="hangman">
-        <img src="./assets/images/hangman10.png" alt="">
-    </div>
-    <div class="word" id="word">
-        <span class="letter">
-            <p>s</p>
-        </span>
-        <span class="letter">
-            <p>t</p>
-        </span>
-        <span class="letter">
-            <p>a</p>
-        </span>
-        <span class="letter">
-            <p>r</p>
-        </span>
-        <span class="letter">
-            <p>t</p>
-        </span>
+    <section id='game'>
+        <div class="con">
+            <div class="hangman" id="hangman">
+                <img src="./assets/images/hangman10.png" alt="">
+            </div>
+            <div class="word" id="word">
+                <span class="letter">
+                    <p>s</p>
+                </span>
+                <span class="letter">
+                    <p>t</p>
+                </span>
+                <span class="letter">
+                    <p>a</p>
+                </span>
+                <span class="letter">
+                    <p>r</p>
+                </span>
+                <span class="letter">
+                    <p>t</p>
+                </span>
 
 
+            </div>
+        </div>
+       
+
+     
+         <div class="con">
+        <div class="controls">
+            <button class="control right guessed" data-key="a">a</button>
+            <button class="control guessed" data-key="b">b</button>
+            <button class="control guessed" data-key="c">c</button>
+            <button class="control guessed" data-key="d">d</button>
+            <button class="control wrong guessed" data-key="e">e</button>
+            <button class="control guessed" data-key="f">f</button>
+            <button class="control guessed" data-key="g">g</button>
+            <button class="control wrong guessed" data-key="h">h</button>
+            <button class="control guessed" data-key="i">i</button>
+            <button class="control guessed" data-key="j">j</button>
+            <button class="control guessed" data-key="k">k</button>
+            <button class="control guessed" data-key="l">l</button>
+            <button class="control guessed" data-key="m">m</button>
+            <button class="control guessed" data-key="n">n</button>
+            <button class="control guessed" data-key="o">o</button>
+            <button class="control guessed" data-key="p">p</button>
+            <button class="control guessed" data-key="q">q</button>
+            <button class="control right guessed" data-key="r">r</button>
+            <button class="control right guessed" data-key="s">s</button>
+            <button class="control right guessed" data-key="t">t</button>
+            <button class="control guessed" data-key="u">u</button>
+            <button class="control guessed" data-key="v">v</button>
+            <button class="control wrong guessed" data-key="w">w</button>
+            <button class="control guessed" data-key="x">x</button>
+            <button class="control guessed" data-key="y">y</button>
+            <button class="control guessed" data-key="z">z</button>
+        </div>
+        <div class="selector">
+            <button class="open-modal" id="new-game" data-start="new-game">
+                Start
+            </button>
+            <button class="open-modal" id="open-how-to">
+                How to Play
+            </button>
+        </div>
     </div>
-    <div class="controls">
-        <button class="control right guessed" data-key="a">a</button>
-        <button class="control guessed" data-key="b">b</button>
-        <button class="control guessed" data-key="c">c</button>
-        <button class="control guessed" data-key="d">d</button>
-        <button class="control wrong guessed" data-key="e">e</button>
-        <button class="control guessed" data-key="f">f</button>
-        <button class="control guessed" data-key="g">g</button>
-        <button class="control wrong guessed" data-key="h">h</button>
-        <button class="control guessed" data-key="i">i</button>
-        <button class="control guessed" data-key="j">j</button>
-        <button class="control guessed" data-key="k">k</button>
-        <button class="control guessed" data-key="l">l</button>
-        <button class="control guessed" data-key="m">m</button>
-        <button class="control guessed" data-key="n">n</button>
-        <button class="control guessed" data-key="o">o</button>
-        <button class="control guessed" data-key="p">p</button>
-        <button class="control guessed" data-key="q">q</button>
-        <button class="control right guessed" data-key="r">r</button>
-        <button class="control right guessed" data-key="s">s</button>
-        <button class="control right guessed" data-key="t">t</button>
-        <button class="control guessed" data-key="u">u</button>
-        <button class="control guessed" data-key="v">v</button>
-        <button class="control wrong guessed" data-key="w">w</button>
-        <button class="control guessed" data-key="x">x</button>
-        <button class="control guessed" data-key="y">y</button>
-        <button class="control guessed" data-key="z">z</button>
-    </div>
-    <div class="selector">
-        <button class="open-modal" id="new-game" data-start="new-game">
-            Start
-        </button>
-        <button class="open-modal" id="open-how-to">
-            How to Play
-        </button>
-    </div>
+    </section>
 
     <div class="modal modal-close" id="diff-select">
         <div class="modal-content">
@@ -127,7 +136,7 @@
                 New Game</button>
         </div>
     </div>
-    
+
 
     <audio src="./assets/sfx/correct-sfx.wav" id="correct-sfx"></audio>
     <audio src="./assets/sfx/wrong-sfx.wav" id="wrong-sfx"></audio>

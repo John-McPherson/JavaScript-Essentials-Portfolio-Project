@@ -27,13 +27,7 @@ h1 {
     text-align: center;
 }
 
-header {
-    height: 10vh;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row nowrap;
-}
+
 
 header p {
     padding-right: .25em;
@@ -51,7 +45,13 @@ header {
     justify-content: center;
     align-content: center;
 }
-
+header {
+    height: 10vh;
+    flex-flow: row nowrap;
+}
+.con{
+    flex-flow: column;
+}
 /* style for the hangman image  */
 
 .hangman>img {
@@ -267,8 +267,8 @@ input:checked+.slider:before {
     }
 }
 
-/* for larger tablet screens size 530px and up  */
-@media screen and (min-width:530px){
+/* for larger tablet screens size 576px and up  */
+@media screen and (min-width:576px){
     h1{
         font-size: 3.5em;
     }
@@ -329,6 +329,47 @@ input:checked+.slider:before {
  /* for larger tablet screens size 1100px and up  */
 @media screen and (min-width:1100px){
     .controls{
-        padding: 0 15%;
+        padding: 0 14%;
     }
+}
+
+/* for larger horizontal orientation screens */
+
+@media screen and (orientation: landscape){
+.controls {
+    background-color: var(--orange);
+    width:60vw;
+    height: 60vh;
+    padding: 0;
+    margin: 0;
+    
+}
+.control{
+    font-size: 1em;
+}
+#hangman{
+    width: 40vw;
+    height: 60vh;
+    background-color: var(--red);
+    margin: 0;
+    align-self: flex-start;
+}
+.word{
+    width: 40vw;
+    height: 20vh;
+    background-color: var(--green);
+}
+.selector{
+    width: 60vw;
+    height: 20vh;
+}
+header {
+    height: 20vh;
+    width: 100vw;
+    background-color: var(--green);
+}
+#game{
+    display: flex;
+    flex-flow: row wrap;
+}
 }
