@@ -270,9 +270,6 @@ input:checked+.slider:before {
 
 /* for larger tablet screens size 576px and up  */
 @media screen and (min-width:576px){
-    h1{
-        font-size: 3.5em;
-    }
     header{
         justify-content: space-around;
         padding-left: 30%;
@@ -299,15 +296,18 @@ input:checked+.slider:before {
 
 /* for larger tablet screens size 700px and up  */
 
-@media screen and (min-width:700px){
+@media screen and (min-height:700px){
 .controls{
     padding: 0 5%;
 }
 }
 
 
-/* for larger tablet screens size 870px and up  */
-@media screen and (min-width:870px){
+/* for larger tablet screens size 1000px height and up  */
+@media screen and (min-height:1000px){
+    :root{
+        font-size: 1.25rem;
+    }
     .hangman{
         height: 45vh; 
     }
@@ -315,8 +315,11 @@ input:checked+.slider:before {
         height: 20vh;
     }
 }
-    /* for larger tablet screens size 939px and up  */
-@media screen and (min-width:939px){
+    /* for larger tablet screens size 1300px height and up  */
+@media screen and (min-height:1300px){
+    :root{
+        font-size: 1.5rem;
+    }
     .controls{
         padding: 0 8%;
     }
@@ -399,12 +402,11 @@ header {
 @media screen and (orientation: landscape) and (min-height:738px){
 :root{
     font-size: 1.5rem;
-
 }
 }
 /* for  horizontal orientated ipad pro screens*/
-@media screen and (orientation: landscape) and (min-height:1024px){
+@media screen and (orientation: landscape) and (min-width:1024px){
     :root{
-        font-size: 2.2rem;
+        font-size: 1.75rem;
     }
     }
