@@ -258,6 +258,12 @@ input:checked+.slider:before {
     -ms-transform: translateX(7px);
     transform: translateX(7px);
 }
+/* style for the timer */
+
+.timer{
+    background-color: violet;
+    justify-self: flex-end;
+}
 
 /* media queries for responsive design */
 
