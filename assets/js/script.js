@@ -207,8 +207,14 @@ function closeModal() {
  */
 function keyControls(event){
     let key = event.key;
-    let pressed = document.querySelectorAll(`[data-key='${key}']`);
-    pressed[0].click();
+    if(key === 'Enter'){
+        closeModal();
+        let open = document.getElementById('diff-select');
+        open.classList.remove('modal-close');
+    }else{
+        let pressed = document.querySelectorAll(`[data-key='${key}']`);
+        pressed[0].click();
+    }
 }
 /**
  * allows the player to mute the games sfxs
