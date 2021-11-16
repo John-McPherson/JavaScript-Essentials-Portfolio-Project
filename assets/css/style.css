@@ -345,7 +345,6 @@ input:checked+.slider:before {
     flex-flow: row  wrap;
 }
 .controls {
-    background-color: var(--orange);
     width:var(--control-width);
     height: 60vh;
     padding: 0;
@@ -361,7 +360,6 @@ input:checked+.slider:before {
 #hangman{
     width: var(--img-width);
     height: 60vh;
-    background-color: var(--red);
     margin: 0;
     align-self: flex-start;
     order: 1;
@@ -369,19 +367,16 @@ input:checked+.slider:before {
 .word{
     width: var(--control-width);
     height: 20vh;
-    background-color: var(--green);
     order: 4;
 }
 .selector{
     width: var(--img-width);
     height: 20vh;
-    background-color: var(--green);
     order: 3;
 }
 header {
     height: 20vh;
     width: 100vw;
-    background-color: var(--green);
 }
 .selector > button{
     font-size: .9em;
