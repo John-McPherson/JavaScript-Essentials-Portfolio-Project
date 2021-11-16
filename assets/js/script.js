@@ -100,10 +100,10 @@ function newWord() {
  */
 function checkGuess(event) {
     event.preventDefault();
-    resetTime();
     if (event.target.classList.contains("guessed")){    
     }
     else {
+    resetTime();
     let guess = this.getAttribute("data-key");
     let letter = "";
     let correct = false;
