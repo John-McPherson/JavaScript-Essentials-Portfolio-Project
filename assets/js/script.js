@@ -136,12 +136,18 @@ function checkGuess(event) {
  */
 function checkEnd() {
     if (right === word.length) {
+        for (let x = 0; x < control.length; x++) {
+            control[x].classList.add("guessed");
+        }
         let congrats = document.getElementById('congrats');
         let congratsText = document.getElementById('congrats-text');
         let html = `<p>The word was ${word}</p>`
         congratsText.innerHTML = html;
         congrats.classList.remove('modal-close');
     } else if (wrong === 10) {
+        for (let x = 0; x < control.length; x++) {
+            control[x].classList.add("guessed");
+        }
         let gameOver = document.getElementById('game-over');
         let gameOverText = document.getElementById('game-over-text');
         let html = `<p>The word was ${word}</p>`
