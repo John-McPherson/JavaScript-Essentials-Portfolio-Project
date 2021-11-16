@@ -6,6 +6,8 @@
     --white: #d8dad3;
     --transparant: rgba(0, 0, 0, 0.0);
     --main-font: "permanent-marker", sans-serif;
+    --img-width:40vw;
+    --control-width:60vw;
     ;
 }
 
@@ -341,7 +343,7 @@ input:checked+.slider:before {
 }
 .controls {
     background-color: var(--orange);
-    width:60vw;
+    width:var(--control-width);
     height: 60vh;
     padding: 0;
     margin: 0;
@@ -354,7 +356,7 @@ input:checked+.slider:before {
     font-size: 1em;
 }
 #hangman{
-    width: 40vw;
+    width: var(--img-width);
     height: 60vh;
     background-color: var(--red);
     margin: 0;
@@ -362,13 +364,13 @@ input:checked+.slider:before {
     order: 1;
 }
 .word{
-    width: 60vw;
+    width: var(--control-width);
     height: 20vh;
     background-color: var(--green);
     order: 4;
 }
 .selector{
-    width: 40vw;
+    width: var(--img-width);
     height: 20vh;
     background-color: var(--green);
     order: 3;
@@ -378,4 +380,24 @@ header {
     width: 100vw;
     background-color: var(--green);
 }
+.selector > button{
+    font-size: .9em;
 }
+}
+
+@media screen and (orientation: landscape) and (min-height:540px){
+:root{
+    font-size: 1.5rem;
+    --control-width:50vw;
+    --img-width:50vw;
+}
+.selector > button{
+    font-size: 1.2em;
+}
+}
+
+@media screen and (orientation: landscape) and (min-height:1024px){
+    :root{
+        font-size: 2.2rem;
+    }
+    }
