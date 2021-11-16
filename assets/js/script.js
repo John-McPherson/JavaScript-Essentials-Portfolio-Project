@@ -19,6 +19,8 @@ var wrong = 0;
 var right = 0;
 var word = "start";
 var mute = false;
+var gameStart = false;
+var time = 10;
 var difficulty = 'easy';
 var easy = ['have', 'say', 'get', 'make', 'know', 'take', 'see', 'come', 'look', 'want', 'give', 'use', 'tell', 'ask', 'work', 'seem', 'feel', 'call']
 var medium = ['think', 'leave', 'lonely', 'climb', 'skilful', 'modern', 'safety', 'people', 'weird', 'women', 'Saturday', 'health', 'forty', 'diary', 'lovely', 'design', 'issue']
@@ -72,6 +74,7 @@ function clearGame() {
     img.innerHTML = `<img src="./assets/images/hangman0.png" alt="">`
     right = 0;
     wrong = 0;
+    gameStart = true;
     let wordContainer = document.getElementById('word');
     wordContainer.classList.remove('long');
     wordContainer.classList.remove('really-long');
@@ -96,6 +99,7 @@ function newWord() {
  */
 function checkGuess(event) {
     event.preventDefault();
+    time = 11;
     if (event.target.classList.contains("guessed")){    
     }
     else {
@@ -144,6 +148,7 @@ function checkEnd() {
         let html = `<p>The word was ${word}</p>`
         congratsText.innerHTML = html;
         congrats.classList.remove('modal-close');
+        gameStart = false;
     } else if (wrong === 10) {
         for (let x = 0; x < control.length; x++) {
             control[x].classList.add("guessed");
@@ -153,6 +158,7 @@ function checkEnd() {
         let html = `<p>The word was ${word}</p>`
         gameOverText.innerHTML = html;
         gameOver.classList.remove('modal-close');
+        gameStart = false;
     }
 }
 /**
@@ -222,3 +228,23 @@ function keyControls(event){
 function muteSfx(){
     mute === false ? mute = true: mute = false;
 }
+function updateTimer(){
+    if (gameStart === true){
+    time--;
+    let timer = document.getElementsByClassName('timer');
+    timer[0].innerHTML = `<p>Time ${time}</p>`
+    if (time <=1){
+        let img = document.getElementById('hangman');
+        wrong++;
+        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
+        time = 11;
+        if (mute === false){
+            let audio = document.getElementById('wrong-sfx');
+            audio.play();
+        }
+    }}
+}
+
+window.setInterval(function() {
+    updateTimer();
+  }, 1000);
