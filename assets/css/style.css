@@ -101,7 +101,6 @@ header {
     height: 35vh;
     justify-content: center;
     align-content: center;
-    flex-grow: 4;
     padding: 1rem;
 }
 
@@ -333,15 +332,22 @@ input:checked+.slider:before {
     }
 }
 
-/* for larger horizontal orientation screens */
+/* for  horizontal orientated screens */
 
 @media screen and (orientation: landscape){
+#game {
+    display: flex;
+    flex-flow: row  wrap;
+}
 .controls {
     background-color: var(--orange);
     width:60vw;
     height: 60vh;
     padding: 0;
     margin: 0;
+    order: 2;
+    justify-self: end;
+    align-self: end;
     
 }
 .control{
@@ -353,23 +359,23 @@ input:checked+.slider:before {
     background-color: var(--red);
     margin: 0;
     align-self: flex-start;
+    order: 1;
 }
 .word{
+    width: 60vw;
+    height: 20vh;
+    background-color: var(--green);
+    order: 4;
+}
+.selector{
     width: 40vw;
     height: 20vh;
     background-color: var(--green);
-}
-.selector{
-    width: 60vw;
-    height: 20vh;
+    order: 3;
 }
 header {
     height: 20vh;
     width: 100vw;
     background-color: var(--green);
-}
-#game{
-    display: flex;
-    flex-flow: row wrap;
 }
 }
