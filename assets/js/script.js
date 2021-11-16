@@ -72,6 +72,7 @@ function clearGame() {
     }
     let img = document.getElementById('hangman');
     img.innerHTML = `<img src="./assets/images/hangman0.png" alt="">`
+    resetTime();
     right = 0;
     wrong = 0;
     gameStart = true;
@@ -99,7 +100,7 @@ function newWord() {
  */
 function checkGuess(event) {
     event.preventDefault();
-    time = 11;
+    resetTime();
     if (event.target.classList.contains("guessed")){    
     }
     else {
@@ -237,7 +238,7 @@ function updateTimer(){
         let img = document.getElementById('hangman');
         wrong++;
         img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
-        time = 11;
+        resetTime();
         if (mute === false){
             let audio = document.getElementById('wrong-sfx');
             audio.play();
@@ -248,3 +249,9 @@ function updateTimer(){
 window.setInterval(function() {
     updateTimer();
   }, 1000);
+
+  function resetTime(){
+    time = 11;
+    let timer = document.getElementsByClassName('timer');
+    timer[0].innerHTML = `<p>Time 10</p>`
+  }
