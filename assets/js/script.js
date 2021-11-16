@@ -103,7 +103,7 @@ function checkGuess(event) {
     if (event.target.classList.contains("guessed")){    
     }
     else {
-    resetTime();
+    guresetTime();
     let guess = this.getAttribute("data-key");
     let letter = "";
     let correct = false;
