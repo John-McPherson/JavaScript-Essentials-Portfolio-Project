@@ -35,7 +35,10 @@ function wrongAns(event) {
         wrong++;
         img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
 }
-
+/**
+ *Called when the user enters an correct guess. 
+ *Turns the pressed key green and updates the word to show all correct guesses"
+ */
 function rightAns(event) {
     event.preventDefault();
     event.target.classList.add("right");
@@ -73,7 +76,9 @@ function clearGame() {
     wordContainer.classList.remove('long');
     wordContainer.classList.remove('really-long');
 }
-
+/**
+ * updates the game interface with a new word 
+ */
 function newWord() {
     genWord();
     let arr = word.split("");
@@ -86,7 +91,9 @@ function newWord() {
     let container = document.getElementById('word')
     container.innerHTML = html;
 }
-
+/**
+ * checks the players input to see if the guess is correct
+ */
 function checkGuess(event) {
     event.preventDefault();
     if (event.target.classList.contains("guessed")){    
@@ -124,7 +131,9 @@ function checkGuess(event) {
     checkEnd()
 }}
 
-
+/**
+ * After the players guess has been checked it checks the game state to see if the win/loss condition has been met.
+ */
 function checkEnd() {
     if (right === word.length) {
         let congrats = document.getElementById('congrats');
@@ -140,7 +149,9 @@ function checkEnd() {
         gameOver.classList.remove('modal-close');
     }
 }
-
+/**
+ * generatates a new word to be guessed
+ */
 function genWord() {
     if (difficulty === 'hard') {
         word = hard[Math.floor(Math.random() * hard.length)];
@@ -160,7 +171,7 @@ function genWord() {
 }
 
 /**
- * To open and close modals
+ * To open the how to and game start modals
  */
 function openModal(event) {
     event.preventDefault();
@@ -174,7 +185,9 @@ function openModal(event) {
         open.classList.remove('modal-close');
     }
 }
-
+/**
+ * closes all modals
+ */
 function closeModal() {
     let close =document.getElementsByClassName('modal');
     for (let x of close) {
@@ -191,6 +204,9 @@ function keyControls(event){
     let pressed = document.querySelectorAll(`[data-key='${key}']`);
     pressed[0].click();
 }
+/**
+ * allows the player to mute the games sfxs
+ */
 function muteSfx(){
     mute === false ? mute = true: mute = false;
 }
