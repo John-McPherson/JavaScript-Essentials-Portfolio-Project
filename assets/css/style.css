@@ -384,18 +384,25 @@ header {
     font-size: .9em;
 }
 }
-
+/* for smaller horizontal orientated tablet screens*/
 @media screen and (orientation: landscape) and (min-height:540px){
+    :root{
+        --control-width:50vw;
+        --img-width:50vw;
+    }
+    .selector > button{
+        font-size: 1.2em;
+    }
+}
+
+/* for  horizontal orientated ipad screens*/
+@media screen and (orientation: landscape) and (min-height:738px){
 :root{
     font-size: 1.5rem;
-    --control-width:50vw;
-    --img-width:50vw;
-}
-.selector > button{
-    font-size: 1.2em;
-}
-}
 
+}
+}
+/* for  horizontal orientated ipad pro screens*/
 @media screen and (orientation: landscape) and (min-height:1024px){
     :root{
         font-size: 2.2rem;
