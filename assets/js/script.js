@@ -233,7 +233,7 @@ function updateTimer(){
     if (gameStart === true){
     time--;
     let timer = document.getElementsByClassName('timer');
-    timer[0].innerHTML = `<p>Time ${time}</p>`
+    timer[0].innerHTML = `<p>Time: ${time}</p>`
     if (time <=1){
         let img = document.getElementById('hangman');
         wrong++;
@@ -253,5 +253,5 @@ window.setInterval(function() {
   function resetTime(){
     time = 11;
     let timer = document.getElementsByClassName('timer');
-    timer[0].innerHTML = `<p>Time 10</p>`
+    timer[0].innerHTML = `<p>Time: 10</p>`
   }

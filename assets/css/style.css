@@ -259,10 +259,17 @@ input:checked+.slider:before {
     transform: translateX(7px);
 }
 /* style for the timer */
-
+.timer-img{
+    display: flex;
+    flex-flow: row;
+    
+}
 .timer{
-    background-color: violet;
-    justify-self: flex-end;
+    width: 20%;
+}
+
+#hangman{
+    width: 90%;
 }
 
 /* media queries for responsive design */
@@ -350,6 +357,11 @@ input:checked+.slider:before {
     display: flex;
     flex-flow: row  wrap;
 }
+
+.timer{
+
+    width: auto;
+}
 .controls {
     width:var(--control-width);
     height: 60vh;
@@ -363,12 +375,19 @@ input:checked+.slider:before {
 .control{
     font-size: 1em;
 }
-#hangman{
+.timer-img{
     width: var(--img-width);
     height: 60vh;
     margin: 0;
     align-self: flex-start;
     order: 1;
+    flex-flow: column nowrap;
+    
+}
+#hangman{
+    height:90%;
+    width: 100%;
+
 }
 .word{
     width: var(--control-width);
