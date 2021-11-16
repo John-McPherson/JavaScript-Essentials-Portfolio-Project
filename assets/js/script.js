@@ -103,7 +103,7 @@ function checkGuess(event) {
     if (event.target.classList.contains("guessed")){    
     }
     else {
-    guresetTime();
+    resetTime();
     let guess = this.getAttribute("data-key");
     let letter = "";
     let correct = false;
@@ -242,6 +242,7 @@ function updateTimer(){
         if (mute === false){
             let audio = document.getElementById('wrong-sfx');
             audio.play();
+        checkEnd();
         }
     }}
 }
