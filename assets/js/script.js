@@ -242,10 +242,10 @@ function updateTimer(){
         wrong++;
         img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
         resetTime();
+        checkEnd();
         if (mute === false){
             let audio = document.getElementById('wrong-sfx');
             audio.play();
-        checkEnd();
         }
     }}
 }
