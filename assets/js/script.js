@@ -229,6 +229,9 @@ function keyControls(event){
 function muteSfx(){
     mute === false ? mute = true: mute = false;
 }
+/**
+ * updates the timer and updates the fail condition if the timer reaches zero
+ */
 function updateTimer(){
     if (gameStart === true){
     time--;
@@ -246,11 +249,15 @@ function updateTimer(){
         }
     }}
 }
-
+/**
+ * calls the updateTimer function every second
+ */
 window.setInterval(function() {
     updateTimer();
   }, 1000);
-
+/**
+ * resets the timer
+ */
   function resetTime(){
     time = 11;
     let timer = document.getElementsByClassName('timer');
