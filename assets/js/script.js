@@ -55,8 +55,12 @@ function rightAns(event) {
 function startGame(event) {
     event.preventDefault();
     difficulty = this.getAttribute("data-diff");
-    let newGameBtn = document.getElementById("new-game");
-    newGameBtn.innerHTML = "New Game"
+    let newGameBtn = document.getElementsByClassName('new-game')
+    for(let x of newGameBtn){
+        console.log(x.innerHTML);
+        let html = "New Game";
+        x.innerHTML = html;
+    }
     clearGame();
     newWord();
     closeModal();
@@ -184,7 +188,7 @@ function genWord() {
 }
 
 /**
- * To open the how to and game start modals
+ * To open the how to play and game start modals
  */
 function openModal(event) {
     event.preventDefault();

@@ -51,9 +51,11 @@ header {
     height: 10vh;
     flex-flow: row nowrap;
 }
-.con{
+.container{
+    display: flex;
     flex-flow: column;
 }
+
 /* style for the hangman image  */
 
 .hangman>img {
@@ -124,6 +126,9 @@ button {
 .selector {
     padding: .5rem .5rem;
     height: 12.5vh;
+}
+#landscape{
+    display: none;
 }
 
 /* style for pressed buttons */
@@ -353,24 +358,31 @@ input:checked+.slider:before {
 /* for  horizontal orientated screens */
 
 @media screen and (orientation: landscape){
+    
+.container{
+    flex-flow: column-reverse;
+}
 #game {
     display: flex;
     flex-flow: row  wrap;
 }
-
+#landscape{
+    display: flex;
+}
+#portrait {
+    display: none;
+}
 .timer{
-
     width: auto;
 }
 .controls {
     width:var(--control-width);
     height: 60vh;
-    padding: 0;
+    padding: 3%;
     margin: 0;
-    order: 2;
     justify-self: end;
     align-self: end;
-    
+    background-color: red;
 }
 .control{
     font-size: 1em;
@@ -380,24 +392,21 @@ input:checked+.slider:before {
     height: 60vh;
     margin: 0;
     align-self: flex-start;
-    order: 1;
     flex-flow: column nowrap;
     
 }
 #hangman{
     height:90%;
     width: 100%;
-
 }
 .word{
     width: var(--control-width);
     height: 20vh;
-    order: 4;
+    order: 1;
 }
 .selector{
     width: var(--img-width);
     height: 20vh;
-    order: 3;
 }
 header {
     height: 20vh;
@@ -410,8 +419,8 @@ header {
 /* for smaller horizontal orientated tablet screens*/
 @media screen and (orientation: landscape) and (min-height:540px){
     :root{
-        --control-width:50vw;
-        --img-width:50vw;
+        --control-width:55vw;
+        --img-width:45vw;
     }
     .selector > button{
         font-size: 1.2em;
