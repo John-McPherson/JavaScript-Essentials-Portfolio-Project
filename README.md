@@ -17,8 +17,12 @@ This project is my second milestone project for the Code Institute Diploma in Fu
     * [On Screen Controls](#on-screen-controls)
     * [Keyboard Controls](#keyboard-controls)
 * [Technologies Used](technologies-used)
-
 * [Deployment](#deployment)
+* [Credits](#credits)
+    * [Content](#content)
+    * [Media](#media)
+    * [Acknowledgements](#acknowledgements)
+
 
 
 ## **UX**
@@ -109,5 +113,19 @@ The site is deployed via github pages. To deploy the site:
 4. Select the source branch that you want to publish. 
 5. Click save. This will generate a url for the site.  
 
+## **Credits**
 
+### **Content**
+
+All code was written by me with the following exceptions; 
+* The code for opening and closing the modals was adapted from [w3schools How TO - Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp)
+* The CSS to get the hand drawn effect on the buttons was taken from R3HAB Media’s [Hand-drawn Button Effect with CSS](https://www.youtube.com/watch?v=oJK7Y9cCPSQ) YouTube tutorial. 
+
+### **Acknowledgements** 
+
+* My mentor [Antonija Simic](https://github.com/tonkec) for their feedback and support during the development of the project. 
+* [Code Institute](https://codeinstitute.net/) for giving me the skills through their tutorials to create this site. 
+* [Free Code Camp](https://www.freecodecamp.org/) for introducing me to coding. 
+* [JavaScript30]( https://javascript30.com/) for providing additional challenges to help me develop my JavaScript tools. 
+* [Css-tricks.com](https://css-tricks.com/) and [W3Schools](https://www.w3schools.com/) for helping me whenever I got stuck. 
 
