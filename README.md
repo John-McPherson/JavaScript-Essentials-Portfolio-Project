@@ -87,7 +87,7 @@ Before starting on the project, I created a mock up using balsamiq.
  * As the player makes incorrect guesses the hangman figure will be filled in allowing players to see exactly how far they are away from getting a game over. 
 * There is a section on the game where players can see how many letters there are to guess;. As the player makes their guesses any correct guesses will fill in the blank spaces giving the player constant feedback as to how the game is going. 
 
-### **Audio Feedback **
+### **Audio Feedback**
  * The user should  get feedback in the form of sounds based on if their guess was correct or not. 
 * The player will have the option to disable the sfxs if required. 
 
