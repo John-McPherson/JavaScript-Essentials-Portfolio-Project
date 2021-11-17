@@ -382,7 +382,6 @@ input:checked+.slider:before {
     margin: 0;
     justify-self: end;
     align-self: end;
-    background-color: red;
 }
 .control{
     font-size: 1em;
