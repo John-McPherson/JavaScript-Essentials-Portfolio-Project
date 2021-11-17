@@ -19,6 +19,7 @@ You can see the final deployed site [here](https://john-mcpherson.github.io/Java
     * [On Screen Controls](#on-screen-controls)
     * [Keyboard Controls](#keyboard-controls)
 * [Technologies Used](technologies-used)
+* [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
     * [Content](#content)
@@ -104,6 +105,10 @@ Before starting on the project, I created a mock up using balsamiq.
 * HTML5
 * CSS3
 * JavaScript
+
+## **Testing**
+
+[Link to External testing document](./TESTING.md)
 
 ## **Deployment**
 
