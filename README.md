@@ -4,6 +4,8 @@ A web-based version of the children’s game Hangman.
 
 This project is my second milestone project for the Code Institute Diploma in Full Stack Software Development.
 
+You can see the final deployed site [here](https://john-mcpherson.github.io/JavaScript-Essentials-Portfolio-Project/)
+
 ## **Contents**
 * [UX](#ux)
     * [User Stories](#user-stories)
