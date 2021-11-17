@@ -384,7 +384,7 @@ input:checked+.slider:before {
     align-self: end;
 }
 .control{
-    font-size: 1em;
+    font-size: .95rem;
 }
 .timer-img{
     width: var(--img-width);
