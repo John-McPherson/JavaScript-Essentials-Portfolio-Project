@@ -10,12 +10,9 @@ This project is my second milestone project for the Code Institute Diploma in Fu
     * [Design](#design)
     * [Wireframes](#wireframes)
 * [Features](#features) 
-    * [tba](# tba)
-
-* [Features left to implement](features-left-to-implement)
     * [Start Button](#start-button)
     * [Difficulty Select Pop Up](#difficulty-select-pop-up)
-    * [How to Play Button**](#how-to-play-button**)
+    * [How to Play Button**](#how-to-play-button)
     * [Difficulty Select Pop Up ](#difficulty-select-pop-up )
     * [On Screen Controls](#on-screen-controls)
     * [Keyboard Controls](#keyboard-controls)
@@ -62,12 +59,6 @@ Before starting on the project, I created a mock up using balsamiq.
 
 ## **Features**
 
-### **feature**
- * to be updated… 
-
-
-## **Features left to implement**
-
 ### **Start Button**
  * A button that allows the user to start the game. This should generate a word to be guessed and clear all wrong guesses. 
 
@@ -77,8 +68,8 @@ Before starting on the project, I created a mock up using balsamiq.
 ### **How to Play Button**
  * A button that allows players to see how to play the game without navigating away from the game.  
 
-### ** Difficulty Select Pop Up **
- * a pop up menu that allows the player to see how to play the game.  
+### **Difficulty Select Pop Up**
+ * A pop up menu that allows the player to see how to play the game.  
 
 ### **On Screen Controls**
  * The user should  be able to control the game via clickable buttons. When the user selects them the buttons will change colour – red if the guess is wrong and green if the guess is correct providing the player with visual feedback. 
@@ -99,6 +90,8 @@ Before starting on the project, I created a mock up using balsamiq.
 
 ### **New Game button**
  * The game will be accompanied by a button that allows the player to start a new game prior to finishing their current one.   
+ ### **Timer**
+ * To increase the players engagement and to prevent the game from being played indefintely I have included a 10 second timer. Once the timer hits 0 the player loses a life and the game state updates. 
 
 ### **Languages** 
 
