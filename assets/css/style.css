@@ -316,12 +316,11 @@ input:checked+.slider:before {
 @media screen and (min-width:576px) {
     header {
         justify-content: space-around;
-        padding-left: 30%;
+        padding-left: 20%;
     }
 
     header>div {
         justify-self: flex-end;
-
     }
 
     .hangman {
@@ -393,7 +392,10 @@ input:checked+.slider:before {
 /* for  horizontal orientated screens */
 
 @media screen and (orientation: landscape) {
-
+    header {
+        justify-content: space-around;
+        padding-left: 20%;
+    }
     .container {
         flex-flow: column-reverse;
     }
