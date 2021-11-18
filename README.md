@@ -67,26 +67,34 @@ Before starting on the project, I created a mock up using balsamiq.
 ## **Features**
 
 ### **Start Button**
- * A button that allows the user to start the game. This should generate a word to be guessed and clear all wrong guesses. 
+ * A button that allows the user to start the game. This should generate a word to be guessed and clear all wrong guesses.
 
-### **Difficulty Select Pop Up**
- * Once the player clicks either the start game button or play again they should be given the option to select the difficulty. This will change which words will be guessed.  
+![W3C HTML validation ](./assets/images/readme-images/example-start-btn.jpg)
+
 
 ### **How to Play Button**
  * A button that allows players to see how to play the game without navigating away from the game.  
 
+ ![W3C HTML validation ](./assets/images/readme-images/example-how-to-btn.jpg)
 ### **Difficulty Select Pop Up**
- * A pop up menu that allows the player to see how to play the game.  
+
+### **Difficulty Select Pop Up**
+ * Once the player clicks either the start game button or play again they should be given the option to select the difficulty. This will change which words will be guessed.  
+
+ ![W3C HTML validation ](./assets/images/readme-images/example-difficulty-selector.jpg) 
 
 ### **On Screen Controls**
  * The user should  be able to control the game via clickable buttons. When the user selects them the buttons will change colour – red if the guess is wrong and green if the guess is correct providing the player with visual feedback. 
-
+ 
+ ![W3C HTML validation ](./assets/images/readme-images/example-controls.jpg) 
 ### **Keyboard Controls**
  * As well as being able to control the game via clickable buttons the user will also be able to select letters via their keyboard.  The buttons on the screen will also change colour to reflect if the player’s guess was correct or incorrect. 
 
 ### **Visual Feedback**
  * As the player makes incorrect guesses the hangman figure will be filled in allowing players to see exactly how far they are away from getting a game over. 
-* There is a section on the game where players can see how many letters there are to guess;. As the player makes their guesses any correct guesses will fill in the blank spaces giving the player constant feedback as to how the game is going. 
+* There is a section on the game where players can see how many letters there are to guess;. As the player makes their guesses any correct guesses will fill in the blank spaces giving the player constant feedback as to how the game is going.
+
+ ![W3C HTML validation ](./assets/images/readme-images/example-feedback.jpg) 
 
 ### **Audio Feedback**
  * The user should  get feedback in the form of sounds based on if their guess was correct or not. 
@@ -95,10 +103,16 @@ Before starting on the project, I created a mock up using balsamiq.
 ### **Game over/ congrats pop up**
  * When the game is either won or lost the game will display a popup either congratulating or commiserating the player. This will be accompanied by a button prompting the player to start a new game. 
 
+  ![W3C HTML validation ](./assets/images/readme-images/example-game-over.jpg)   ![W3C HTML validation ](./assets/images/readme-images/example-congrats.jpg) 
+
 ### **New Game button**
  * The game will be accompanied by a button that allows the player to start a new game prior to finishing their current one.   
+
+  ![W3C HTML validation ](./assets/images/readme-images/example-game-over.jpg)   ![W3C HTML validation ](./assets/images/readme-images/example-congrats.jpg) 
  ### **Timer**
  * To increase the players engagement and to prevent the game from being played indefintely I have included a 10 second timer. Once the timer hits 0 the player loses a life and the game state updates. 
+
+  ![W3C HTML validation ](./assets/images/readme-images/example-timer.jpg) 
 
 ### **Languages** 
 
