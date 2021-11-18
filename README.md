@@ -52,6 +52,7 @@ To reflect the “school game” origin of the hangman game I wanted to use a ha
 
 The games colour palate was generated through Coolors.co. The colours were chosen to give visable feedback to the user allowing them to see at a glance if their guesses were incorrect or correct. 
  
+ ![coolors](./assets/images/readme-images/hangman-coolors.png)
 
 ### **Wireframes**
 
