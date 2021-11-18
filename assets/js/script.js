@@ -15,7 +15,7 @@ for (let x = 0; x < diffSelect.length; x++) {
     diffSelect[x].addEventListener("click", startGame);
 }
 window.addEventListener('keydown',keyControls);
-document.getElementById('mute-button').addEventListener('change',muteSfx)
+document.getElementById('mute-button').addEventListener('change',muteSfx);
 var wrong = 0;
 var right = 0;
 var word = "start";
@@ -211,7 +211,11 @@ function keyControls(event){
  * allows the player to mute the games sfxs
  */
 function muteSfx(){
-    mute === false ? mute = true: mute = false;
+    if(mute === false){
+        mute = true;
+    }else {
+        mute =false;
+    }
 }
 /**
  * updates the timer and updates the fail condition if the timer reaches zero
