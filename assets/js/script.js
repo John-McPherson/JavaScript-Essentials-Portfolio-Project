@@ -35,7 +35,7 @@ function wrongAns(event) {
         event.target.classList.add("guessed");
         let img = document.getElementById('hangman');
         wrong++;
-        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
+        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="an partly drawn image of a man hanging from a set of gallows drawn in the style of the childerns game hangman indicating that the players have ${10-wrong} guesses left">`
 }
 /**
  *Called when the user enters an correct guess. 
