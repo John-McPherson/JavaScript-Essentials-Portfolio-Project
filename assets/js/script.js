@@ -90,9 +90,7 @@ function newWord() {
     let arr = word.split("");
     let html = "";
     for (let x of arr) {
-        html = html + `<span class="letter" data-letter="${x}">
-            <p class="not-guessed">${x}</p>
-        </span>`
+        html = html + `<p data-letter="${x}"><span class="letter not-guessed" data-letter="${x}">${x}</span></p>`
     }
     let container = document.getElementById('word')
     container.innerHTML = html;
@@ -121,7 +119,8 @@ function checkGuess(event) {
         for (let y of span) {
            let letter = y.getAttribute("data-letter");
             if (letter === guess) {
-                y.firstElementChild.classList.remove("not-guessed");
+                console.log(y)
+                y.classList.remove("not-guessed");
                 if (mute === false){
                 let audio = document.getElementById('correct-sfx');
                 audio.play();}

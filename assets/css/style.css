@@ -86,8 +86,8 @@ header {
     color: var(--transparant);
 }
 
-.letter>p {
-    font-size: 2em;
+p > span {
+    font-size: 1.5em;
     border-bottom: 4px solid var(--black);
     border-radius: 40px 35px 225px 45px/25px 225px 35px 35px;
     padding: 0 10px;
@@ -95,14 +95,14 @@ header {
 
 }
 
-.long p {
-    font-size: 2em;
+.long span {
+    font-size: 1.5em;
     padding: 0 5px;
     margin: 0 5px
 }
 
-.really-long p {
-    font-size: 1.75em;
+.really-long span {
+    font-size: 1.25em;
     padding: 0 5px;
     margin: 0 5px
 }
@@ -283,7 +283,7 @@ input:checked+.slider:before {
 
 .timer {
     width: 20%;
-    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #hangman {
