@@ -6,6 +6,8 @@ This project is my second milestone project for the Code Institute Diploma in Fu
 
 You can see the final deployed site [here](https://john-mcpherson.github.io/JavaScript-Essentials-Portfolio-Project/)
 
+![Site mock-up](./assets/images/readme-images/hangman.jpg)
+
 ## **Contents**
 * [UX](#ux)
     * [User Stories](#user-stories)
