@@ -45,9 +45,7 @@ function rightAns(event) {
     event.preventDefault();
     event.target.classList.add("right");
     event.target.classList.add("guessed");
-
 }
-
 /**
  * The fuction run when user clicks on the start game button.
  * It clears the game board and generates a new word to be guessed
@@ -105,6 +103,7 @@ function newWord() {
 function checkGuess(event) {
     event.preventDefault();
     if (event.target.classList.contains("guessed")){    
+        // do nothing
     }
     else {
     resetTime();
@@ -155,15 +154,7 @@ function checkEnd() {
         congrats.classList.remove('modal-close');
         gameStart = false;
     } else if (wrong === 10) {
-        for (let x = 0; x < control.length; x++) {
-            control[x].classList.add("guessed");
-        }
-        let gameOver = document.getElementById('game-over');
-        let gameOverText = document.getElementById('game-over-text');
-        let html = `<p>The word was ${word}</p>`
-        gameOverText.innerHTML = html;
-        gameOver.classList.remove('modal-close');
-        gameStart = false;
+        gameOver();
     }
 }
 /**
@@ -266,4 +257,18 @@ window.setInterval(function() {
     time = 11;
     let timer = document.getElementsByClassName('timer');
     timer[0].innerHTML = `<p>Time: 10</p>`
+  }
+/**
+ * run when the player runs out of guesses 
+ */
+  function gameOver(){
+    for (let x = 0; x < control.length; x++) {
+        control[x].classList.add("guessed");
+    }
+    let gameOver = document.getElementById('game-over');
+    let gameOverText = document.getElementById('game-over-text');
+    let html = `<p>The word was ${word}</p>`
+    gameOverText.innerHTML = html;
+    gameOver.classList.remove('modal-close');
+    gameStart = false;
   }
