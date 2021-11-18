@@ -5,9 +5,11 @@
 * [Performance](#performance)
 * [Bug Fixes](#bug-fixes)
 
-
 ## **Functionality Testing**
 
+My first checks were to test the usability of my the game. I played through the game multiple times on all difficulty settings and with all different options. Any and all bugs were fixed ([see bug fix section for details](#bug-fixes)).
+
+I also checked to make sure that the site was responsive. I checked each page using developer tools on google chrome to check the break points and checked it against multiple emulated devices. 
 
 ## **Bug Fixes**
 
