@@ -108,7 +108,6 @@ function checkGuess(event) {
     else {
     resetTime();
     let guess = this.getAttribute("data-key");
-    let letter = "";
     let correct = false;
     let arr = word.split("")
     for (let x of arr) {
@@ -117,10 +116,10 @@ function checkGuess(event) {
         }
     }
     if (correct === true) {
-        rightAns(event)
+        rightAns(event);
         let span = document.getElementsByClassName('letter');
         for (let y of span) {
-            letter = y.getAttribute("data-letter");
+           let letter = y.getAttribute("data-letter");
             if (letter === guess) {
                 y.firstElementChild.classList.remove("not-guessed");
                 if (mute === false){
@@ -193,7 +192,6 @@ function closeModal() {
     for (let x of close) {
         x.classList.add('modal-close');
     }
-
 }
 /**
  * allows the player to control the game through the keyboard 

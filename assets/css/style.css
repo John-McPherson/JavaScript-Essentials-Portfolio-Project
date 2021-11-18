@@ -6,8 +6,8 @@
     --white: #d8dad3;
     --transparant: rgba(0, 0, 0, 0.0);
     --main-font: "permanent-marker", sans-serif;
-    --img-width:40vw;
-    --control-width:60vw;
+    --img-width: 40vw;
+    --control-width: 60vw;
     ;
 }
 
@@ -27,9 +27,8 @@ body {
 h1 {
     font-size: 3em;
     text-align: center;
+    padding-left: 5%;
 }
-
-
 
 header p {
     padding-right: .25em;
@@ -37,23 +36,33 @@ header p {
 
 }
 
-header p, label, h1 {
+header p,
+label,
+h1 {
     align-self: center;
 }
 
-div,
-header {
+div {
     display: flex;
     justify-content: center;
     align-content: center;
 }
+
 header {
     height: 10vh;
+    display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
 }
-.container{
+
+.container {
     display: flex;
     flex-flow: column;
+}
+
+.sfx {
+    padding-right: 5%;
 }
 
 /* style for the hangman image  */
@@ -127,7 +136,8 @@ button {
     padding: .5rem .5rem;
     height: 12.5vh;
 }
-#landscape{
+
+#landscape {
     display: none;
 }
 
@@ -263,50 +273,69 @@ input:checked+.slider:before {
     -ms-transform: translateX(7px);
     transform: translateX(7px);
 }
+
 /* style for the timer */
-.timer-img{
+.timer-img {
     display: flex;
     flex-flow: row;
-    
-}
-.timer{
-    width: 20%;
+
 }
 
-#hangman{
-    width: 90%;
+.timer {
+    width: 20%;
+    padding-left: 10%;
+}
+
+#hangman {
+    width: 80%;
+    padding-left: 20%;
 }
 
 /* media queries for responsive design */
 
+/* for smaller screens iphone 5/se */
+
+@media screen and (max-width:340px) {
+    .controls {
+        padding: .5rem;
+    }
+
+    button {
+        font-size: .8rem;
+    }
+}
+
 /* for larger phonescreens size 375px and up  */
-@media screen and (min-width:374px){
+@media screen and (min-width:374px) {
     .word {
         align-items: center;
     }
 }
 
 /* for larger tablet screens size 576px and up  */
-@media screen and (min-width:576px){
-    header{
+@media screen and (min-width:576px) {
+    header {
         justify-content: space-around;
         padding-left: 30%;
     }
-    header > div{
+
+    header>div {
         justify-self: flex-end;
-        
+
     }
 
-    .hangman{
+    .hangman {
         height: 35vh;
         padding: 2.5%;
     }
-    .controls{
+
+    .controls {
         height: 30vh;
-        margin-top:.5em;
+        margin-top: .5em;
     }
+
     .control {
-        padding:.35em .75em;
+        padding: .35em .75em;
     }
 
 }
@@ -314,127 +343,150 @@ input:checked+.slider:before {
 
 /* for larger tablet screens size 700px and up  */
 
-@media screen and (min-height:700px){
-.controls{
-    padding: 0 5%;
-}
+@media screen and (min-height:700px) {
+    .controls {
+        padding: 0 5%;
+    }
 }
 
 
 /* for larger tablet screens size 1000px height and up  */
-@media screen and (min-height:1000px){
-    :root{
+@media screen and (min-height:1000px) {
+    :root {
         font-size: 1.25rem;
     }
-    .hangman{
-        height: 45vh; 
+
+    .hangman {
+        height: 45vh;
     }
-    .controls{
+
+    .controls {
         height: 20vh;
     }
 }
-    /* for larger tablet screens size 1300px height and up  */
-@media screen and (min-height:1300px){
-    :root{
+
+/* for larger tablet screens size 1300px height and up  */
+@media screen and (min-height:1300px) {
+    :root {
         font-size: 1.5rem;
     }
-    .controls{
+
+    .controls {
         padding: 0 8%;
     }
 }
- /* for larger tablet screens size 1020px and up  */
-@media screen and (min-width:1020px){
-    .controls{
+
+/* for larger tablet screens size 1020px and up  */
+@media screen and (min-width:1020px) {
+    .controls {
         padding: 0 10%;
     }
 }
- /* for larger tablet screens size 1100px and up  */
-@media screen and (min-width:1100px){
-    .controls{
+
+/* for larger tablet screens size 1100px and up  */
+@media screen and (min-width:1100px) {
+    .controls {
         padding: 0 14%;
     }
 }
 
 /* for  horizontal orientated screens */
 
-@media screen and (orientation: landscape){
-    
-.container{
-    flex-flow: column-reverse;
-}
-#game {
-    display: flex;
-    flex-flow: row  wrap;
-}
-#landscape{
-    display: flex;
-}
-#portrait {
-    display: none;
-}
-.timer{
-    width: auto;
-}
-.controls {
-    width:var(--control-width);
-    height: 60vh;
-    padding: 3%;
-    margin: 0;
-    justify-self: end;
-    align-self: end;
-}
-.control{
-    font-size: .95rem;
-}
-.timer-img{
-    width: var(--img-width);
-    height: 60vh;
-    margin: 0;
-    align-self: flex-start;
-    flex-flow: column nowrap;
-    
-}
-#hangman{
-    height:90%;
-    width: 100%;
-}
-.word{
-    width: var(--control-width);
-    height: 20vh;
-    order: 1;
-}
-.selector{
-    width: var(--img-width);
-    height: 20vh;
-}
-header {
-    height: 20vh;
-    width: 100vw;
-}
-.selector > button{
-    font-size: .9em;
-}
-}
-/* for smaller horizontal orientated tablet screens*/
-@media screen and (orientation: landscape) and (min-height:540px){
-    :root{
-        --control-width:55vw;
-        --img-width:45vw;
+@media screen and (orientation: landscape) {
+
+    .container {
+        flex-flow: column-reverse;
     }
-    .selector > button{
+
+    #game {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #landscape {
+        display: flex;
+    }
+
+    #portrait {
+        display: none;
+    }
+
+    .timer {
+        width: auto;
+        padding: 0;
+    }
+
+    .controls {
+        width: var(--control-width);
+        height: 60vh;
+        padding: 3%;
+        margin: 0;
+        justify-self: end;
+        align-self: end;
+    }
+
+    .control {
+        font-size: .95rem;
+    }
+
+    .timer-img {
+        width: var(--img-width);
+        height: 60vh;
+        margin: 0;
+        align-self: flex-start;
+        flex-flow: column nowrap;
+
+    }
+
+    #hangman {
+        height: 90%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .word {
+        width: var(--control-width);
+        height: 20vh;
+        order: 1;
+    }
+
+    .selector {
+        width: var(--img-width);
+        height: 20vh;
+    }
+
+    header {
+        height: 20vh;
+        width: 100vw;
+    }
+
+    .selector>button {
+        font-size: .9em;
+    }
+}
+
+/* for smaller horizontal orientated tablet screens*/
+@media screen and (orientation: landscape) and (min-height:540px) {
+    :root {
+        --control-width: 60vw;
+        --img-width: 45vw;
+    }
+
+    .selector>button {
         font-size: 1.2em;
     }
 }
 
 /* for  horizontal orientated ipad screens*/
-@media screen and (orientation: landscape) and (min-height:738px){
-:root{
-    font-size: 1.5rem;
+@media screen and (orientation: landscape) and (min-height:738px) {
+    :root {
+        font-size: 1.5rem;
+    }
 }
-}
+
 /* for  horizontal orientated ipad pro screens*/
-@media screen and (orientation: landscape) and (min-width:1024px){
-    :root{
+@media screen and (orientation: landscape) and (min-width:1024px) {
+    :root {
         font-size: 1.75rem;
     }
-    }
+}
