@@ -144,15 +144,7 @@ function checkGuess(event) {
  */
 function checkEnd() {
     if (right === word.length) {
-        for (let x = 0; x < control.length; x++) {
-            control[x].classList.add("guessed");
-        }
-        let congrats = document.getElementById('congrats');
-        let congratsText = document.getElementById('congrats-text');
-        let html = `<p>The word was ${word}</p>`
-        congratsText.innerHTML = html;
-        congrats.classList.remove('modal-close');
-        gameStart = false;
+      congrats();
     } else if (wrong === 10) {
         gameOver();
     }
@@ -272,3 +264,17 @@ window.setInterval(function() {
     gameOver.classList.remove('modal-close');
     gameStart = false;
   }
+  /**
+   * run when the player has correctly guessed the word.
+   */
+  function congrats(){
+    for (let x = 0; x < control.length; x++) {
+        control[x].classList.add("guessed");
+    }
+    let congrats = document.getElementById('congrats');
+    let congratsText = document.getElementById('congrats-text');
+    let html = `<p>The word was ${word}</p>`
+    congratsText.innerHTML = html;
+    congrats.classList.remove('modal-close');
+    gameStart = false;
+}
