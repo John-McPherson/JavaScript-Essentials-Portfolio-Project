@@ -471,7 +471,7 @@ input:checked+.slider:before {
 @media screen and (orientation: landscape) and (min-height:540px) {
     :root {
         --control-width: 60vw;
-        --img-width: 45vw;
+        --img-width: 40vw;
     }
 
     .selector>button {
