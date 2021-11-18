@@ -85,13 +85,12 @@ header {
     color: var(--transparant);
 }
 
-p > span {
+p>span {
     font-size: 1.5em;
     border-bottom: 4px solid var(--black);
     border-radius: 40px 35px 225px 45px/25px 225px 35px 35px;
     padding: 0 10px;
     margin: 0 5px;
-
 }
 
 .long span {
@@ -305,6 +304,7 @@ input:checked+.slider:before {
 }
 
 /* for larger phonescreens size 375px and up  */
+
 @media screen and (min-width:374px) {
     .word {
         align-items: center;
@@ -338,7 +338,6 @@ input:checked+.slider:before {
 
 }
 
-
 /* for larger tablet screens size 700px and up  */
 
 @media screen and (min-height:700px) {
@@ -346,7 +345,6 @@ input:checked+.slider:before {
         padding: 0 5%;
     }
 }
-
 
 /* for larger tablet screens size 1000px height and up  */
 @media screen and (min-height:1000px) {
@@ -382,6 +380,7 @@ input:checked+.slider:before {
 }
 
 /* for larger tablet screens size 1100px and up  */
+
 @media screen and (min-width:1100px) {
     .controls {
         padding: 0 14%;
@@ -395,6 +394,7 @@ input:checked+.slider:before {
         justify-content: space-around;
         padding-left: 20%;
     }
+
     .container {
         flex-flow: column-reverse;
     }
@@ -436,7 +436,6 @@ input:checked+.slider:before {
         margin: 0;
         align-self: flex-start;
         flex-flow: column nowrap;
-
     }
 
     #hangman {
@@ -450,35 +449,33 @@ input:checked+.slider:before {
         height: 20vh;
         order: 1;
     }
-
     .selector {
         width: var(--img-width);
         height: 20vh;
     }
-
     header {
         height: 20vh;
         width: 100vw;
     }
-
     .selector>button {
         font-size: .9em;
     }
 }
 
 /* for smaller horizontal orientated tablet screens*/
+
 @media screen and (orientation: landscape) and (min-height:540px) {
     :root {
         --control-width: 60vw;
         --img-width: 40vw;
     }
-
     .selector>button {
         font-size: 1.2em;
     }
 }
 
 /* for  horizontal orientated ipad screens*/
+
 @media screen and (orientation: landscape) and (min-height:738px) {
     :root {
         font-size: 1.5rem;
@@ -486,6 +483,7 @@ input:checked+.slider:before {
 }
 
 /* for  horizontal orientated ipad pro screens*/
+
 @media screen and (orientation: landscape) and (min-width:1024px) {
     :root {
         font-size: 1.75rem;
