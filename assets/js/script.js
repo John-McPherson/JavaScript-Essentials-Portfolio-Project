@@ -2,19 +2,20 @@ let control = document.getElementsByClassName('control');
 for (let x = 0; x < control.length; x++) {
     control[x].addEventListener("click", checkGuess);
 }
-let open = document.getElementsByClassName('open-modal');
-for (let x = 0; x < open.length; x++) {
-    open[x].addEventListener("click", openModal);
+let openPopup = document.getElementsByClassName('open-modal');
+for (let x = 0; x < openPopup.length; x++) {
+    openPopup[x].addEventListener("click", openModal);
 }
-let close = document.getElementsByClassName('close-modal');
-for (let x = 0; x < close.length; x++) {
-    close[x].addEventListener("click", closeModal);
+let closePopup = document.getElementsByClassName('close-modal');
+for (let x = 0; x < closePopup.length; x++) {
+    closePopup[x].addEventListener("click", closeModal);
 }
 let diffSelect = document.getElementsByClassName('diff-select');
 for (let x = 0; x < diffSelect.length; x++) {
     diffSelect[x].addEventListener("click", startGame);
 }
 window.addEventListener('keydown',keyControls);
+document.getElementById('mute-button').addEventListener('change',muteSfx)
 var wrong = 0;
 var right = 0;
 var word = "start";
@@ -22,9 +23,9 @@ var mute = false;
 var gameStart = false;
 var time = 10;
 var difficulty = 'easy';
-var easy = ['have', 'say', 'get', 'make', 'know', 'take', 'see', 'come', 'look', 'want', 'give', 'use', 'tell', 'ask', 'work', 'seem', 'feel', 'call']
-var medium = ['think', 'leave', 'lonely', 'climb', 'skilful', 'modern', 'safety', 'people', 'weird', 'women', 'Saturday', 'health', 'forty', 'diary', 'lovely', 'design', 'issue']
-var hard = ['jazz', 'conscience', 'audible', 'diamond', 'industrial', 'buried', 'knowledge', 'argument', 'material', 'column', 'stomach', 'acquire', 'essential', 'courteous', 'mortgage', 'minutes', 'friends']
+var easy = ['have', 'say', 'get', 'make', 'know', 'take', 'see', 'come', 'look', 'want', 'give', 'use', 'tell', 'ask', 'work', 'seem', 'feel', 'call'];
+var medium = ['think', 'leave', 'lonely', 'climb', 'skilful', 'modern', 'safety', 'people', 'weird', 'women', 'Saturday', 'health', 'forty', 'diary', 'lovely', 'design', 'issue'];
+var hard = ['jazz', 'conscience', 'audible', 'diamond', 'industrial', 'buried', 'knowledge', 'argument', 'material', 'column', 'stomach', 'acquire', 'essential', 'courteous', 'mortgage', 'minutes', 'friends'];
 /**
  *Called when the user enters an incorrect guess. 
  *Turns the pressed key red and advances the hangman image by one
@@ -35,7 +36,7 @@ function wrongAns(event) {
         event.target.classList.add("guessed");
         let img = document.getElementById('hangman');
         wrong++;
-        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="an partly drawn image of a man hanging from a set of gallows drawn in the style of the childerns game hangman indicating that the players have ${10-wrong} guesses left">`
+        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="an partly drawn image of a man hanging from a set of gallows drawn in the style of the childerns game hangman indicating that the players have ${10-wrong} guesses left">`;
 }
 /**
  *Called when the user enters an correct guess. 
@@ -53,7 +54,7 @@ function rightAns(event) {
 function startGame(event) {
     event.preventDefault();
     difficulty = this.getAttribute("data-diff");
-    let newGameBtn = document.getElementsByClassName('new-game')
+    let newGameBtn = document.getElementsByClassName('new-game');
     for(let x of newGameBtn){
         console.log(x.innerHTML);
         let html = "New Game";
@@ -73,7 +74,7 @@ function clearGame() {
         control[x].classList.remove("guessed");
     }
     let img = document.getElementById('hangman');
-    img.innerHTML = `<img src="./assets/images/hangman0.png" alt="">`
+    img.innerHTML = `<img src="./assets/images/hangman0.png" alt="">`;
     resetTime();
     right = 0;
     wrong = 0;
@@ -90,9 +91,9 @@ function newWord() {
     let arr = word.split("");
     let html = "";
     for (let x of arr) {
-        html = html + `<p data-letter="${x}"><span class="letter not-guessed" data-letter="${x}">${x}</span></p>`
+        html = html + `<p data-letter="${x}"><span class="letter not-guessed" data-letter="${x}">${x}</span></p>`;
     }
-    let container = document.getElementById('word')
+    let container = document.getElementById('word');
     container.innerHTML = html;
 }
 /**
@@ -107,7 +108,7 @@ function checkGuess(event) {
     resetTime();
     let guess = this.getAttribute("data-key");
     let correct = false;
-    let arr = word.split("")
+    let arr = word.split("");
     for (let x of arr) {
         if (x === guess) {
             correct = true;
@@ -119,7 +120,6 @@ function checkGuess(event) {
         for (let y of span) {
            let letter = y.getAttribute("data-letter");
             if (letter === guess) {
-                console.log(y)
                 y.classList.remove("not-guessed");
                 if (mute === false){
                 let audio = document.getElementById('correct-sfx');
@@ -132,9 +132,9 @@ function checkGuess(event) {
         if (mute === false){
             audio.play();
         }
-        wrongAns(event)
+        wrongAns(event);
     }
-    checkEnd()
+    checkEnd();
 }}
 
 /**
@@ -220,11 +220,11 @@ function updateTimer(){
     if (gameStart === true){
     time--;
     let timer = document.getElementsByClassName('timer');
-    timer[0].innerHTML = `<p>Time: ${time}</p>`
+    timer[0].innerHTML = `<p>Time: ${time}</p>`;
     if (time <=1){
         let img = document.getElementById('hangman');
         wrong++;
-        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`
+        img.innerHTML = `<img src="./assets/images/hangman${wrong}.png" alt="">`;
         resetTime();
         checkEnd();
         if (mute === false){
@@ -245,7 +245,7 @@ window.setInterval(function() {
   function resetTime(){
     time = 11;
     let timer = document.getElementsByClassName('timer');
-    timer[0].innerHTML = `<p>Time: 10</p>`
+    timer[0].innerHTML = `<p>Time: 10</p>`;
   }
 /**
  * run when the player runs out of guesses 
@@ -256,7 +256,7 @@ window.setInterval(function() {
     }
     let gameOver = document.getElementById('game-over');
     let gameOverText = document.getElementById('game-over-text');
-    let html = `<p>The word was ${word}</p>`
+    let html = `<p>The word was ${word}</p>`;
     gameOverText.innerHTML = html;
     gameOver.classList.remove('modal-close');
     gameStart = false;
@@ -270,7 +270,7 @@ window.setInterval(function() {
     }
     let congrats = document.getElementById('congrats');
     let congratsText = document.getElementById('congrats-text');
-    let html = `<p>The word was ${word}</p>`
+    let html = `<p>The word was ${word}</p>`;
     congratsText.innerHTML = html;
     congrats.classList.remove('modal-close');
     gameStart = false;
