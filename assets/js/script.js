@@ -136,7 +136,6 @@ function checkGuess(event) {
     }
     checkEnd();
 }}
-
 /**
  * After the players guess has been checked it checks the game state to see if the win/loss condition has been met.
  */
@@ -167,7 +166,6 @@ function genWord() {
     }
 
 }
-
 /**
  * To open the how to play and game start modals
  */
