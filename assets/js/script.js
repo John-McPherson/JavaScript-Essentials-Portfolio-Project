@@ -200,9 +200,11 @@ function keyControls(event){
         closeModal();
         let open = document.getElementById('diff-select');
         open.classList.remove('modal-close');
-    }else{
+    }else if ((/[a-zA-Z]/).test(key)){
         let pressed = document.querySelectorAll(`[data-key='${key}']`);
         pressed[0].click();
+    }else{
+        // do nothing
     }
 }
 /**
