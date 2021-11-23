@@ -19,7 +19,7 @@ document.getElementById('mute-button').addEventListener('change',muteSfx);
 var wrong = 0;
 var right = 0;
 var word = "start";
-var mute = false;
+var mute = true;
 var gameStart = false;
 var time = 10;
 var difficulty = 'easy';
