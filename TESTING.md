@@ -35,14 +35,14 @@ Lighthouse in chrome developer tools was used to assess the performance of the g
 ## **Bug Fixes**
 
 During development I discovered and fixed the following bugs in my code;
-* Players were able to win the game by finding one correct letter and repeatedly selecting it until they won. This bug was fixed in commit fe8cdad
-* Players could activate the buttons before a game started. This bug was fixed in commit 634f257
-* The counter to determine the end of the game was too long allowing players to have an extra guess. This bug was fixed in commit b7304bd.
-* After adding the functionality for players to choose letters using keypresses players could continue playing after the win/loss condition was reached. This bug was fixed in commit 9ee8456.
-* Players could reset the timer by selecting already guessed letters. This bug was fixed in commits 310bb94 and f87e45e
-* While adding the timer a typo was added to the checkGuess function which prevented the game from running. This was fixed in commit 69a85b2
-* The game would not time out when the sound was enabled. This bug was fixed in commit 72d09c8
-* Typing none alphanumeric keys caused errors to be logged to the console. This was fixed in commit [9132b7f](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/9142b7fff33f381c0b31392646d76f82da0d94e4) 
+* Players were able to win the game by finding one correct letter and repeatedly selecting it until they won. This bug was fixed in commit [fe8cdad](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/fe8cdad4edc6189288c0e79d0c7562c333e697e2).
+* Players could activate the buttons before a game started. This bug was fixed in commit [634f257](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/634f257376f861c236b62ce4a7410dc57290873c).
+* The counter to determine the end of the game was too long allowing players to have an extra guess. This bug was fixed in commit [b7304bd](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/b7304bd8469fe66692160a1aaa2177f69ba60a5c).
+* After adding the functionality for players to choose letters using keypresses players could continue playing after the win/loss condition was reached. This bug was fixed in commit [9ee8456](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/9ee8456ee9500702751e8a81da7ff197988b8057).
+* Players could reset the timer by selecting already guessed letters. This bug was fixed in commits [310bb94](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/310bb940aaa1b5abea8e7e7f1396976ab59bd813) and [f87e45e](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/f87e45ec7aefc27a0bc27b71cf7498872f9399ff).
+* While adding the timer a typo was added to the checkGuess function which prevented the game from running. This was fixed in commit [69a85b2](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/69a85b2adf79e46db01a7026dbb215d0cfb73f10).
+* The game would not time out when the sound was enabled. This bug was fixed in commit [72d09c8](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/1d193c33441a97a39af310ae2e61178b5c409a71).
+* Typing none alphanumeric keys caused errors to be logged to the console. This was fixed in commit [9132b7f](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/9142b7fff33f381c0b31392646d76f82da0d94e4). 
 
 ## **User Story Evaluations**
 
