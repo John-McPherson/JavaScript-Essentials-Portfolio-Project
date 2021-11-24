@@ -56,7 +56,6 @@ function startGame(event) {
     difficulty = this.getAttribute("data-diff");
     let newGameBtn = document.getElementsByClassName('new-game');
     for (let x of newGameBtn) {
-        console.log(x.innerHTML);
         let html = "New Game";
         x.innerHTML = html;
     }

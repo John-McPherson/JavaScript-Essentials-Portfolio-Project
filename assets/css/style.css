@@ -470,7 +470,7 @@ input:checked+.slider:before {
         --img-width: 40vw;
     }
     .selector>button {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
 
