@@ -122,6 +122,7 @@ Before starting on the project, I created a mock up using balsamiq.
 * HTML5
 * CSS3
 * JavaScript
+* Git
 
 ## **Testing**
 
