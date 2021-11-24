@@ -401,7 +401,7 @@ input:checked+.slider:before {
 
     #game {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     }
 
     #landscape {
