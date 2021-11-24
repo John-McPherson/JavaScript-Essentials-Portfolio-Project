@@ -78,7 +78,7 @@ header {
 /* style for the word section  */
 
 .word {
-    height: 10vh;
+    height: auto;
 }
 
 .not-guessed {
@@ -446,7 +446,7 @@ input:checked+.slider:before {
 
     .word {
         width: var(--control-width);
-        height: 20vh;
+        height: auto;
         order: 1;
     }
     .selector {

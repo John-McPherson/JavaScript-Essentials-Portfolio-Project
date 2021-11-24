@@ -122,9 +122,9 @@ function checkGuess(event) {
             if (letter === guess) {
                 y.classList.remove("not-guessed");
                 if (mute === false){
-                let audio = document.getElementById('correct-sfx');
-                audio.play();}
-                right++;
+                    let audio = document.getElementById('correct-sfx');
+                    audio.play();}
+                    right++;
             }
         }
     } else {
@@ -141,7 +141,7 @@ function checkGuess(event) {
  */
 function checkEnd() {
     if (right === word.length) {
-      congrats();
+        congrats();
     } else if (wrong === 10) {
         gameOver();
     }
