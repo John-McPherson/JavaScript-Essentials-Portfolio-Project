@@ -42,6 +42,7 @@ During development I discovered and fixed the following bugs in my code;
 * Players could reset the timer by selecting already guessed letters. This bug was fixed in commits 310bb94 and f87e45e
 * While adding the timer a typo was added to the checkGuess function which prevented the game from running. This was fixed in commit 69a85b2
 * The game would not time out when the sound was enabled. This bug was fixed in commit 72d09c8
+* Typing none alphanumeric keys caused errors to be logged to the console. This was fixed in commit [9132b7f](https://github.com/John-McPherson/JavaScript-Essentials-Portfolio-Project/commit/9142b7fff33f381c0b31392646d76f82da0d94e4) 
 
 ## **User Story Evaluations**
 
